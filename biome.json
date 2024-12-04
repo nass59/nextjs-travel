@@ -1,3 +1,6 @@
 {
-  "extends": ["ultracite"]
+  "extends": ["ultracite"],
+  "files": {
+    "ignore": ["packages/tailwind-config/*config.ts"]
+  }
 }
