@@ -30,6 +30,7 @@
         "useImportRestrictions": "off",
         "noProcessEnv": "off",
         "useComponentExportOnlyModules": "off",
+        "noImgElement": "off",
         "useExplicitType": "off"
       },
       "style": {
