@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/experimental-nextjs-vite';
+import type { StorybookConfig } from '@storybook/react-vite';
 
 import { dirname, join } from 'node:path';
 
@@ -21,7 +21,7 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-interactions'),
   ],
   framework: {
-    name: getAbsolutePath('@storybook/experimental-nextjs-vite'),
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
 };
