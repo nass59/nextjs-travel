@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Content,
@@ -6,10 +6,10 @@ import {
   Item,
   Root,
   Trigger,
-} from '@radix-ui/react-accordion';
-import { ChevronDownIcon } from '@radix-ui/react-icons';
-import { cn } from '@repo/design-system/lib/utils';
-import type { ComponentProps } from 'react';
+} from "@radix-ui/react-accordion";
+import { ChevronDownIcon } from "@radix-ui/react-icons";
+import { cn } from "@repo/design-system/lib/utils";
+import type { ComponentProps } from "react";
 
 // Accordion
 const Accordion = Root;
@@ -18,7 +18,7 @@ const Accordion = Root;
 type AccordionItemProps = ComponentProps<typeof Item>;
 
 const AccordionItem = ({ className, ref, ...props }: AccordionItemProps) => (
-  <Item ref={ref} className={cn('border-b', className)} {...props} />
+  <Item ref={ref} className={cn("border-b", className)} {...props} />
 );
 
 // AccordionTrigger
@@ -34,7 +34,7 @@ const AccordionTrigger = ({
     <Trigger
       ref={ref}
       className={cn(
-        'flex flex-1 items-center justify-between py-4 text-left font-medium text-sm transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
+        "flex flex-1 items-center justify-between py-4 text-left font-medium text-sm transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
         className
       )}
       {...props}
@@ -59,7 +59,7 @@ const AccordionContent = ({
     className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
-    <div className={cn('pt-0 pb-4', className)}>{children}</div>
+    <div className={cn("pt-0 pb-4", className)}>{children}</div>
   </Content>
 );
 

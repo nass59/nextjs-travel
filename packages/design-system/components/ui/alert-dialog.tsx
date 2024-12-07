@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Action,
@@ -10,11 +10,11 @@ import {
   Root,
   Title,
   Trigger,
-} from '@radix-ui/react-alert-dialog';
-import type { ComponentProps, HTMLAttributes } from 'react';
+} from "@radix-ui/react-alert-dialog";
+import type { ComponentProps, HTMLAttributes } from "react";
 
-import { buttonVariants } from '@repo/design-system/components/ui/button';
-import { cn } from '@repo/design-system/lib/utils';
+import { buttonVariants } from "@repo/design-system/components/ui/button";
+import { cn } from "@repo/design-system/lib/utils";
 
 // AlertDialog
 const AlertDialog = Root;
@@ -35,7 +35,7 @@ const AlertDialogOverlay = ({
 }: AlertDialogOverlayProps) => (
   <Overlay
     className={cn(
-      'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80 data-[state=closed]:animate-out data-[state=open]:animate-in',
+      "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80 data-[state=closed]:animate-out data-[state=open]:animate-in",
       className
     )}
     {...props}
@@ -56,7 +56,7 @@ const AlertDialogContent = ({
     <Content
       ref={ref}
       className={cn(
-        'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] fixed top-[50%] left-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=closed]:animate-out data-[state=open]:animate-in sm:rounded-lg',
+        "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] fixed top-[50%] left-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=closed]:animate-out data-[state=open]:animate-in sm:rounded-lg",
         className
       )}
       {...props}
@@ -70,7 +70,7 @@ type AlertDialogHeaderProps = HTMLAttributes<HTMLDivElement>;
 const AlertDialogHeader = ({ className, ...props }: AlertDialogHeaderProps) => (
   <div
     className={cn(
-      'flex flex-col space-y-2 text-center sm:text-left',
+      "flex flex-col space-y-2 text-center sm:text-left",
       className
     )}
     {...props}
@@ -83,7 +83,7 @@ type AlertDialogFooterProps = HTMLAttributes<HTMLDivElement>;
 const AlertDialogFooter = ({ className, ...props }: AlertDialogFooterProps) => (
   <div
     className={cn(
-      'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
       className
     )}
     {...props}
@@ -100,7 +100,7 @@ const AlertDialogTitle = ({
 }: AlertDialogTitleProps) => (
   <Title
     ref={ref}
-    className={cn('font-semibold text-lg', className)}
+    className={cn("font-semibold text-lg", className)}
     {...props}
   />
 );
@@ -115,7 +115,7 @@ const AlertDialogDescription = ({
 }: AlertDialogDescriptionProps) => (
   <Description
     ref={ref}
-    className={cn('text-muted-foreground text-sm', className)}
+    className={cn("text-muted-foreground text-sm", className)}
     {...props}
   />
 );
@@ -142,8 +142,8 @@ const AlertDialogCancel = ({
   <Cancel
     ref={ref}
     className={cn(
-      buttonVariants({ variant: 'outline' }),
-      'mt-2 sm:mt-0',
+      buttonVariants({ variant: "outline" }),
+      "mt-2 sm:mt-0",
       className
     )}
     {...props}
