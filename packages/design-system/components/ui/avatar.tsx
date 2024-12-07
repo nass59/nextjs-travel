@@ -9,10 +9,7 @@ type AvatarProps = ComponentProps<typeof Root>;
 const Avatar = ({ className, ref, ...props }: AvatarProps) => (
   <Root
     ref={ref}
-    className={cn(
-      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
-      className
-    )}
+    className={cn("relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full", className)}
     {...props}
   />
 );
@@ -21,11 +18,7 @@ const Avatar = ({ className, ref, ...props }: AvatarProps) => (
 type AvatarImageProps = ComponentProps<typeof Image>;
 
 const AvatarImage = ({ className, ref, ...props }: AvatarImageProps) => (
-  <Image
-    ref={ref}
-    className={cn("aspect-square h-full w-full", className)}
-    {...props}
-  />
+  <Image ref={ref} className={cn("aspect-square h-full w-full", className)} {...props} />
 );
 
 // AvatarFallback
@@ -42,4 +35,5 @@ const AvatarFallback = ({ className, ref, ...props }: AvatarFallbackProps) => (
   />
 );
 
+// Exports
 export { Avatar, AvatarImage, AvatarFallback };

@@ -28,11 +28,7 @@ const AlertDialogPortal = Portal;
 // AlertDialogOverlay
 type AlertDialogOverlayProps = ComponentProps<typeof Overlay>;
 
-const AlertDialogOverlay = ({
-  className,
-  ref,
-  ...props
-}: AlertDialogOverlayProps) => (
+const AlertDialogOverlay = ({ className, ref, ...props }: AlertDialogOverlayProps) => (
   <Overlay
     className={cn(
       "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80 data-[state=closed]:animate-out data-[state=open]:animate-in",
@@ -46,11 +42,7 @@ const AlertDialogOverlay = ({
 // AlertDialogContent
 type AlertDialogContentProps = ComponentProps<typeof Content>;
 
-const AlertDialogContent = ({
-  className,
-  ref,
-  ...props
-}: AlertDialogContentProps) => (
+const AlertDialogContent = ({ className, ref, ...props }: AlertDialogContentProps) => (
   <AlertDialogPortal>
     <AlertDialogOverlay />
     <Content
@@ -68,13 +60,7 @@ const AlertDialogContent = ({
 type AlertDialogHeaderProps = HTMLAttributes<HTMLDivElement>;
 
 const AlertDialogHeader = ({ className, ...props }: AlertDialogHeaderProps) => (
-  <div
-    className={cn(
-      "flex flex-col space-y-2 text-center sm:text-left",
-      className
-    )}
-    {...props}
-  />
+  <div className={cn("flex flex-col space-y-2 text-center sm:text-left", className)} {...props} />
 );
 
 // AlertDialogFooter
@@ -82,10 +68,7 @@ type AlertDialogFooterProps = HTMLAttributes<HTMLDivElement>;
 
 const AlertDialogFooter = ({ className, ...props }: AlertDialogFooterProps) => (
   <div
-    className={cn(
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
-      className
-    )}
+    className={cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className)}
     {...props}
   />
 );
@@ -93,59 +76,31 @@ const AlertDialogFooter = ({ className, ...props }: AlertDialogFooterProps) => (
 // AlertDialogTitle
 type AlertDialogTitleProps = ComponentProps<typeof Title>;
 
-const AlertDialogTitle = ({
-  className,
-  ref,
-  ...props
-}: AlertDialogTitleProps) => (
-  <Title
-    ref={ref}
-    className={cn("font-semibold text-lg", className)}
-    {...props}
-  />
+const AlertDialogTitle = ({ className, ref, ...props }: AlertDialogTitleProps) => (
+  <Title ref={ref} className={cn("font-semibold text-lg", className)} {...props} />
 );
 
 // AlertDialogDescription
 type AlertDialogDescriptionProps = ComponentProps<typeof Description>;
 
-const AlertDialogDescription = ({
-  className,
-  ref,
-  ...props
-}: AlertDialogDescriptionProps) => (
-  <Description
-    ref={ref}
-    className={cn("text-muted-foreground text-sm", className)}
-    {...props}
-  />
+const AlertDialogDescription = ({ className, ref, ...props }: AlertDialogDescriptionProps) => (
+  <Description ref={ref} className={cn("text-muted-foreground text-sm", className)} {...props} />
 );
 
 // AlertDialogAction
 type AlertDialogActionProps = ComponentProps<typeof Action>;
 
-const AlertDialogAction = ({
-  className,
-  ref,
-  ...props
-}: AlertDialogActionProps) => (
+const AlertDialogAction = ({ className, ref, ...props }: AlertDialogActionProps) => (
   <Action ref={ref} className={cn(buttonVariants(), className)} {...props} />
 );
 
 // AlertDialogCancel
 type AlertDialogCancelProps = ComponentProps<typeof Cancel>;
 
-const AlertDialogCancel = ({
-  className,
-  ref,
-  ...props
-}: AlertDialogCancelProps) => (
+const AlertDialogCancel = ({ className, ref, ...props }: AlertDialogCancelProps) => (
   <Cancel
     ref={ref}
-    className={cn(
-      buttonVariants({ variant: "outline" }),
-      "mt-2 sm:mt-0",
-      className
-    )}
+    className={cn(buttonVariants({ variant: "outline" }), "mt-2 sm:mt-0", className)}
     {...props}
   />
 );
