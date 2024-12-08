@@ -23,6 +23,7 @@
       },
       "style": {
         "noDefaultExport": "off",
+        "useNamingConvention": "off",
         "noImplicitBoolean": "off",
         "useFilenamingConvention": {
           "level": "error",
