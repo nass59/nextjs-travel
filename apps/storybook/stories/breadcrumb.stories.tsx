@@ -17,8 +17,6 @@ const meta = {
   title: "ui/Breadcrumb",
   component: Breadcrumb,
   tags: ["autodocs"],
-  argTypes: {},
-  args: {},
   parameters: {
     layout: "centered",
   },

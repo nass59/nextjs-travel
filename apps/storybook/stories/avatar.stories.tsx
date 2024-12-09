@@ -12,7 +12,6 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {},
   render: (args) => (
     <Avatar {...args}>
       <AvatarImage src="https://github.com/shadcn.png" />

@@ -9,6 +9,9 @@ const meta = {
   title: "ui/Badge",
   component: Badge,
   tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     children: {
       control: "text",
@@ -16,9 +19,6 @@ const meta = {
   },
   args: {
     children: "Badge",
-  },
-  parameters: {
-    layout: "centered",
   },
 } satisfies Meta<typeof Badge>;
 

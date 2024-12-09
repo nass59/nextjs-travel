@@ -23,7 +23,6 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {},
   render: (args) => (
     <AlertDialog {...args}>
       <AlertDialogTrigger>Open</AlertDialogTrigger>

@@ -14,7 +14,6 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {},
   args: {
     mode: "single",
     selected: new Date(),

@@ -10,6 +10,9 @@ const meta = {
   title: "ui/Button",
   component: Button,
   tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     children: {
       control: "text",
@@ -19,9 +22,6 @@ const meta = {
     variant: "default",
     size: "default",
     children: "Button",
-  },
-  parameters: {
-    layout: "centered",
   },
 } satisfies Meta<typeof Button>;
 
@@ -89,16 +89,16 @@ export const Link: Story = {
  * loading indicator, such as a spinner, to signify an in-progress action.
  */
 export const Loading: Story = {
+  args: {
+    ...Outline.args,
+    disabled: true,
+  },
   render: (args) => (
     <Button {...args}>
       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
       Button
     </Button>
   ),
-  args: {
-    ...Outline.args,
-    disabled: true,
-  },
 };
 
 /**
@@ -106,14 +106,14 @@ export const Loading: Story = {
  * providing additional context for the action.
  */
 export const WithIcon: Story = {
+  args: {
+    ...Secondary.args,
+  },
   render: (args) => (
     <Button {...args}>
       <Mail className="mr-2 h-4 w-4" /> Login with Email Button
     </Button>
   ),
-  args: {
-    ...Secondary.args,
-  },
 };
 
 /**

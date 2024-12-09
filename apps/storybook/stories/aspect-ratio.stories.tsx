@@ -9,7 +9,13 @@ const meta: Meta<typeof AspectRatio> = {
   title: "ui/AspectRatio",
   component: AspectRatio,
   tags: ["autodocs"],
-  argTypes: {},
+  decorators: [
+    (Story) => (
+      <div className="w-1/2">
+        <Story />
+      </div>
+    ),
+  ],
   render: (args) => (
     <AspectRatio {...args} className="bg-slate-50 dark:bg-slate-800">
       <img
@@ -19,13 +25,6 @@ const meta: Meta<typeof AspectRatio> = {
       />
     </AspectRatio>
   ),
-  decorators: [
-    (Story) => (
-      <div className="w-1/2">
-        <Story />
-      </div>
-    ),
-  ],
 } satisfies Meta<typeof AspectRatio>;
 
 export default meta;

@@ -40,6 +40,9 @@ export const Default: Story = {};
  * Use the `destructive` alert to indicate a destructive action.
  */
 export const Destructive: Story = {
+  args: {
+    variant: "destructive",
+  },
   render: (args) => (
     <Alert {...args}>
       <AlertCircle className="h-4 w-4" />
@@ -47,7 +50,4 @@ export const Destructive: Story = {
       <AlertDescription>Your session has expired. Please log in again.</AlertDescription>
     </Alert>
   ),
-  args: {
-    variant: "destructive",
-  },
 };
