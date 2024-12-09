@@ -68,7 +68,7 @@ const ChartContainer = ({
   const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`;
 
   return (
-    <ChartContext.Provider value={{ config }}>
+    <ChartContext value={{ config }}>
       <div
         data-chart={chartId}
         ref={ref}
@@ -82,7 +82,7 @@ const ChartContainer = ({
         <ChartStyle id={chartId} config={config} />
         <ResponsiveContainer>{children}</ResponsiveContainer>
       </div>
-    </ChartContext.Provider>
+    </ChartContext>
   );
 };
 
