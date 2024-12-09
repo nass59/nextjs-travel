@@ -31,7 +31,11 @@ const BreadcrumbList = ({ className, ref, ...props }: BreadcrumbListProps) => (
 type BreadcrumbItemProps = ComponentProps<"li">;
 
 const BreadcrumbItem = ({ className, ref, ...props }: BreadcrumbItemProps) => (
-  <li ref={ref} className={cn("inline-flex items-center gap-1.5", className)} {...props} />
+  <li
+    ref={ref}
+    className={cn("inline-flex items-center gap-1.5", className)}
+    {...props}
+  />
 );
 
 // BreadcrumbLink
@@ -39,7 +43,12 @@ type BreadcrumbLinkProps = ComponentProps<"a"> & {
   asChild?: boolean;
 };
 
-const BreadcrumbLink = ({ asChild, className, ref, ...props }: BreadcrumbLinkProps) => {
+const BreadcrumbLink = ({
+  asChild,
+  className,
+  ref,
+  ...props
+}: BreadcrumbLinkProps) => {
   const Comp = asChild ? Slot : "a";
 
   return (
@@ -68,7 +77,11 @@ const BreadcrumbPage = ({ className, ref, ...props }: BreadcrumbPageProps) => (
 // BreadcrumbSeparator
 type BreadcrumbSeparatorProps = ComponentProps<"li">;
 
-const BreadcrumbSeparator = ({ children, className, ...props }: BreadcrumbSeparatorProps) => (
+const BreadcrumbSeparator = ({
+  children,
+  className,
+  ...props
+}: BreadcrumbSeparatorProps) => (
   <li
     role="presentation"
     aria-hidden="true"
@@ -82,7 +95,10 @@ const BreadcrumbSeparator = ({ children, className, ...props }: BreadcrumbSepara
 // BreadcrumbEllipsis
 type BreadcrumbEllipsisProps = ComponentProps<"span">;
 
-const BreadcrumbEllipsis = ({ className, ...props }: BreadcrumbEllipsisProps) => (
+const BreadcrumbEllipsis = ({
+  className,
+  ...props
+}: BreadcrumbEllipsisProps) => (
   <span
     role="presentation"
     aria-hidden="true"

@@ -8,7 +8,10 @@ type CardProps = ComponentProps<"div">;
 const Card = ({ className, ref, ...props }: CardProps) => (
   <div
     ref={ref}
-    className={cn("rounded-xl border bg-card text-card-foreground shadow", className)}
+    className={cn(
+      "rounded-xl border bg-card text-card-foreground shadow",
+      className
+    )}
     {...props}
   />
 );
@@ -17,7 +20,11 @@ const Card = ({ className, ref, ...props }: CardProps) => (
 type CardHeaderProps = ComponentProps<"div">;
 
 const CardHeader = ({ className, ref, ...props }: CardHeaderProps) => (
-  <div ref={ref} className={cn("flex flex-col space-y-1.5 p-6", className)} {...props} />
+  <div
+    ref={ref}
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    {...props}
+  />
 );
 
 // CardTitle
@@ -34,8 +41,16 @@ const CardTitle = ({ className, ref, ...props }: CardTitleProps) => (
 // CardDescription
 type CardDescriptionProps = ComponentProps<"div">;
 
-const CardDescription = ({ className, ref, ...props }: CardDescriptionProps) => (
-  <div ref={ref} className={cn("text-muted-foreground text-sm", className)} {...props} />
+const CardDescription = ({
+  className,
+  ref,
+  ...props
+}: CardDescriptionProps) => (
+  <div
+    ref={ref}
+    className={cn("text-muted-foreground text-sm", className)}
+    {...props}
+  />
 );
 
 // CardContent
@@ -49,8 +64,19 @@ const CardContent = ({ className, ref, ...props }: CardContentProps) => (
 type CardFooterProps = ComponentProps<"div">;
 
 const CardFooter = ({ className, ref, ...props }: CardFooterProps) => (
-  <div ref={ref} className={cn("flex items-center p-6 pt-0", className)} {...props} />
+  <div
+    ref={ref}
+    className={cn("flex items-center p-6 pt-0", className)}
+    {...props}
+  />
 );
 
 // Exports
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+};

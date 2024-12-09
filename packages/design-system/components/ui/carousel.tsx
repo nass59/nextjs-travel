@@ -3,7 +3,9 @@
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
-import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react";
+import useEmblaCarousel, {
+  type UseEmblaCarouselType,
+} from "embla-carousel-react";
 import {
   type ComponentProps,
   type KeyboardEvent,
@@ -130,7 +132,8 @@ const Carousel = ({
         carouselRef,
         api: api,
         opts,
-        orientation: orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+        orientation:
+          orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
         scrollPrev,
         scrollNext,
         canScrollPrev,
@@ -153,14 +156,22 @@ const Carousel = ({
 // CarouselContent
 type CarouselContentProps = ComponentProps<"div">;
 
-const CarouselContent = ({ className, ref, ...props }: CarouselContentProps) => {
+const CarouselContent = ({
+  className,
+  ref,
+  ...props
+}: CarouselContentProps) => {
   const { carouselRef, orientation } = useCarousel();
 
   return (
     <div ref={carouselRef} className="overflow-hidden">
       <div
         ref={ref}
-        className={cn("flex", orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col", className)}
+        className={cn(
+          "flex",
+          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+          className
+        )}
         {...props}
       />
     </div>

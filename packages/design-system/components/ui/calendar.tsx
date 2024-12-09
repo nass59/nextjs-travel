@@ -10,7 +10,12 @@ import { buttonVariants } from "./button";
 // Calendar
 export type CalendarProps = ComponentProps<typeof DayPicker>;
 
-const Calendar = ({ className, classNames, showOutsideDays = true, ...props }: CalendarProps) => {
+const Calendar = ({
+  className,
+  classNames,
+  showOutsideDays = true,
+  ...props
+}: CalendarProps) => {
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
@@ -19,13 +24,15 @@ const Calendar = ({ className, classNames, showOutsideDays = true, ...props }: C
         button_next: cn(
           buttonVariants({
             variant: "outline",
-            className: "absolute right-0 h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100",
+            className:
+              "absolute right-0 h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100",
           })
         ),
         button_previous: cn(
           buttonVariants({
             variant: "outline",
-            className: "absolute left-0 h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100",
+            className:
+              "absolute left-0 h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100",
           })
         ),
         caption: "relative flex items-center justify-center pt-1",
@@ -58,7 +65,8 @@ const Calendar = ({ className, classNames, showOutsideDays = true, ...props }: C
       }}
       components={{
         Chevron: ({ orientation }) => {
-          const Icon = orientation === "left" ? ChevronLeftIcon : ChevronRightIcon;
+          const Icon =
+            orientation === "left" ? ChevronLeftIcon : ChevronRightIcon;
           return <Icon className="h-4 w-4" />;
         },
       }}
