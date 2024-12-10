@@ -25,7 +25,7 @@ const meta: Meta<typeof AspectRatio> = {
       />
     </AspectRatio>
   ),
-} satisfies Meta<typeof AspectRatio>;
+};
 
 export default meta;
 

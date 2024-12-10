@@ -44,7 +44,7 @@ const meta: Meta<typeof Carousel> = {
       <CarouselNext />
     </Carousel>
   ),
-} satisfies Meta<typeof Carousel>;
+};
 
 export default meta;
 
