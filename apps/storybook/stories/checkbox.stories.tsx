@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Checkbox } from "@repo/design-system/components/ui/checkbox";
+import { Label } from "@repo/design-system/components/ui/label";
 
 /**
  * A control that allows the user to toggle between checked and not checked.
@@ -19,12 +20,7 @@ const meta = {
   render: (args) => (
     <div className="flex space-x-2">
       <Checkbox {...args} />
-      <label
-        htmlFor={args.id}
-        className="font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
-      >
-        Accept terms and conditions
-      </label>
+      <Label htmlFor={args.id}>Accept terms and conditions</Label>
     </div>
   ),
 } satisfies Meta<typeof Checkbox>;

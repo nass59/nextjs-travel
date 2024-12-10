@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { Button } from "@repo/design-system/components/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -33,17 +34,10 @@ const meta = {
             account and remove your data from our servers.
           </DialogDescription>
         </DialogHeader>
-        <DialogFooter className="gap-4">
-          <button type="button" className="hover:underline">
-            Cancel
-          </button>
-          <DialogClose>
-            <button
-              type="button"
-              className="rounded bg-primary px-4 py-2 text-primary-foreground"
-            >
-              Continue
-            </button>
+        <DialogFooter>
+          <Button variant="link">Cancel</Button>
+          <DialogClose asChild>
+            <Button>Continue</Button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>

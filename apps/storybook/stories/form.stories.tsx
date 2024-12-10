@@ -8,6 +8,7 @@ import {
   string as zString,
 } from "zod";
 
+import { Button } from "@repo/design-system/components/ui/button";
 import {
   Form,
   FormControl,
@@ -17,6 +18,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@repo/design-system/components/ui/form";
+import { Input } from "@repo/design-system/components/ui/input";
 
 /**
  * Building forms with React Hook Form and Zod.
@@ -52,7 +54,7 @@ const ProfileForm = (args: Story["args"]) => {
 
   return (
     <Form {...args} {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
           name="username"
@@ -60,11 +62,7 @@ const ProfileForm = (args: Story["args"]) => {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <input
-                  className="w-full rounded-md border border-input bg-background px-3 py-2"
-                  placeholder="username"
-                  {...field}
-                />
+                <Input placeholder="username" {...field} />
               </FormControl>
               <FormDescription>
                 This is your public display name.
@@ -73,12 +71,7 @@ const ProfileForm = (args: Story["args"]) => {
             </FormItem>
           )}
         />
-        <button
-          className="rounded bg-primary px-4 py-2 text-primary-foreground"
-          type="submit"
-        >
-          Submit
-        </button>
+        <Button type="submit">Submit</Button>
       </form>
     </Form>
   );

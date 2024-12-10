@@ -72,7 +72,6 @@ const meta = {
   title: "ui/Chart",
   component: ChartContainer,
   tags: ["autodocs"],
-  argTypes: {},
   args: {
     children: <div />,
   },
