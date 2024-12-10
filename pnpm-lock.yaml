@@ -60,6 +60,9 @@ importers:
 
   apps/storybook:
     dependencies:
+      '@hookform/resolvers':
+        specifier: ^3.9.1
+        version: 3.9.1(react-hook-form@7.54.0(react@19.0.0))
       '@repo/design-system':
         specifier: workspace:*
         version: link:../../packages/design-system
@@ -75,15 +78,21 @@ importers:
       react-dom:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
+      react-hook-form:
+        specifier: ^7.54.0
+        version: 7.54.0(react@19.0.0)
       recharts:
         specifier: ^2.14.1
         version: 2.14.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      zod:
+        specifier: ^3.24.0
+        version: 3.24.0
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^3.2.2
         version: 3.2.2(react@19.0.0)(storybook@8.4.7)
       '@repo/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/tailwind-config
       '@repo/typescript-config':
         specifier: workspace:*
