@@ -19,7 +19,8 @@
         "all": true,
         "useComponentExportOnlyModules": "off",
         "noImgElement": "off",
-        "useExplicitType": "off"
+        "useExplicitType": "off",
+        "noSecrets": "off"
       },
       "style": {
         "noDefaultExport": "off",
