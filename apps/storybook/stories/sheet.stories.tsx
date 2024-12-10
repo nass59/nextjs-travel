@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
+import { Button } from "@repo/design-system/components/ui/button";
 import {
   Sheet,
   SheetClose,
@@ -9,26 +10,29 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@repo/design-system/components/ui/sheet';
+} from "@repo/design-system/components/ui/sheet";
 
 /**
  * Extends the Dialog component to display content that complements the main
  * content of the screen.
  */
 const meta: Meta<typeof SheetContent> = {
-  title: 'ui/Sheet',
+  title: "ui/Sheet",
   component: Sheet,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     side: {
-      options: ['top', 'bottom', 'left', 'right'],
+      options: ["top", "bottom", "left", "right"],
       control: {
-        type: 'radio',
+        type: "radio",
       },
     },
   },
   args: {
-    side: 'right',
+    side: "right",
   },
   render: (args) => (
     <Sheet>
@@ -42,20 +46,15 @@ const meta: Meta<typeof SheetContent> = {
           </SheetDescription>
         </SheetHeader>
         <SheetFooter>
-          <SheetClose>
-            <button className="hover:underline">Cancel</button>
+          <SheetClose asChild>
+            <Button variant="link">Cancel</Button>
           </SheetClose>
-          <button className="rounded bg-primary px-4 py-2 text-primary-foreground">
-            Submit
-          </button>
+          <Button>Submit</Button>
         </SheetFooter>
       </SheetContent>
     </Sheet>
   ),
-  parameters: {
-    layout: 'centered',
-  },
-} satisfies Meta<typeof SheetContent>;
+};
 
 export default meta;
 
