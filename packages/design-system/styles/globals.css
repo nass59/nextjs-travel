@@ -115,16 +115,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* This layer is by next-forge */
-@layer base {
-  * {
-    @apply min-w-0;
-  }
-  html {
-    text-rendering: optimizelegibility;
-  }
-  body {
-    @apply min-h-[100dvh];
-  }
-}
