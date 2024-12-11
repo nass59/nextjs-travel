@@ -36,7 +36,8 @@
         }
       },
       "suspicious": {
-        "noReactSpecificProps": "off"
+        "noReactSpecificProps": "off",
+        "noShadowRestrictedNames": "off"
       }
     }
   },
