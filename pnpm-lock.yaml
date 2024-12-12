@@ -109,6 +109,9 @@ importers:
       '@storybook/addon-interactions':
         specifier: ^8.4.7
         version: 8.4.7(storybook@8.4.7)
+      '@storybook/addon-themes':
+        specifier: ^8.4.7
+        version: 8.4.7(storybook@8.4.7)
       '@storybook/blocks':
         specifier: ^8.4.7
         version: 8.4.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7)
@@ -133,6 +136,9 @@ importers:
       '@vitejs/plugin-react-swc':
         specifier: ^3.7.2
         version: 3.7.2(@swc/helpers@0.5.15)(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(terser@5.37.0)(yaml@2.6.1))
+      chromatic:
+        specifier: ^11.20.2
+        version: 11.20.2
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -1668,6 +1674,11 @@ packages:
 
   '@storybook/addon-outline@8.4.7':
     resolution: {integrity: sha512-6LYRqUZxSodmAIl8icr585Oi8pmzbZ90aloZJIpve+dBAzo7ydYrSQxxoQEVltXbKf3VeVcrs64ouAYqjisMYA==}
+    peerDependencies:
+      storybook: ^8.4.7
+
+  '@storybook/addon-themes@8.4.7':
+    resolution: {integrity: sha512-MZa3eWTz0b3BQvF71WqLqvEYzDtbMhQx1IIluWBMMGzJ4sWBzLX85LoNMUlHsNd4EhEmAZ1xQQFIJpDWTBx0nQ==}
     peerDependencies:
       storybook: ^8.4.7
 
@@ -4671,6 +4682,11 @@ snapshots:
   '@storybook/addon-outline@8.4.7(storybook@8.4.7)':
     dependencies:
       '@storybook/global': 5.0.0
+      storybook: 8.4.7
+      ts-dedent: 2.2.0
+
+  '@storybook/addon-themes@8.4.7(storybook@8.4.7)':
+    dependencies:
       storybook: 8.4.7
       ts-dedent: 2.2.0
 

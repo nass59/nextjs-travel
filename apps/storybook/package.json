@@ -39,6 +39,7 @@
     "@types/react": "19.0.1",
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react-swc": "^3.7.2",
+    "chromatic": "^11.20.2",
     "cross-env": "^7.0.3",
     "postcss": "^8.4.49",
     "storybook": "^8.4.7",

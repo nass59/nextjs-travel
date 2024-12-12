@@ -10,18 +10,17 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    backgrounds: {
-      default: "light",
-      values: [
-        {
-          name: "light",
-          value: "hsl(0 0% 100%)",
+    chromatic: {
+      modes: {
+        light: {
+          theme: "light",
+          className: "light",
         },
-        {
-          name: "dark",
-          value: "hsl(0 0% 3.9%)",
+        dark: {
+          theme: "dark",
+          className: "dark",
         },
-      ],
+      },
     },
   },
 };
