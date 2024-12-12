@@ -482,7 +482,7 @@ const NavUser = ({ user }: NavUserProps) => {
   );
 };
 
-export const Base: Story = {
+export const Default: Story = {
   args: {
     variant: "inset",
     collapsible: "icon",

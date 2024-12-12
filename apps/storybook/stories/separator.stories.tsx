@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 /**
  * The default form of the separator.
  */
-export const Horizontal: Story = {
+export const Vertical: Story = {
   render: () => (
     <div className="flex gap-2">
       <div>Left</div>
@@ -29,9 +29,9 @@ export const Horizontal: Story = {
 };
 
 /**
- * A vertical separator.
+ * A horizontal separator.
  */
-export const Vertical: Story = {
+export const Horizontal: Story = {
   render: () => (
     <div className="grid gap-2">
       <div>Top</div>
