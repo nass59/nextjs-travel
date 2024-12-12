@@ -4,9 +4,11 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "format-and-lint": "biome check .",
-    "format-and-lint:fix": "biome check . --write",
-    "check-dependencies": "sherif"
+    "lint": "turbo lint",
+    "check-dependencies": "sherif",
+    "bump-deps": "npx npm-check-updates --deep -u -x geist && pnpm install",
+    "bump-ui": "npx shadcn@latest add --all --overwrite -c packages/design-system",
+    "clean": "git clean -xdf node_modules"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
