@@ -10,6 +10,9 @@
       "a11y": {
         "useFocusableInteractive": "off"
       },
+      "complexity": {
+        "useSimplifiedLogicExpression": "off"
+      },
       "correctness": {
         "noNodejsModules": "off",
         "noUndeclaredDependencies": "off",
@@ -17,10 +20,26 @@
       },
       "nursery": {
         "all": true,
-        "useComponentExportOnlyModules": "off",
+        "noCommonJs": "off",
         "noImgElement": "off",
+        "noProcessEnv": "off",
+        "noSecrets": "off",
+        "useComponentExportOnlyModules": "off",
+        "useConsistentCurlyBraces": "off",
         "useExplicitType": "off",
-        "noSecrets": "off"
+        "useImportRestrictions": "off",
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "error",
+          "options": {
+            "attributes": ["className"],
+            "functions": ["clsx", "cva", "tw", "twMerge", "cn", "twJoin"]
+          }
+        }
+      },
+      "performance": {
+        "noBarrelFile": "off",
+        "noReExportAll": "off"
       },
       "style": {
         "noDefaultExport": "off",
