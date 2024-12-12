@@ -1,6 +1,19 @@
 "use client";
 
 import { Slot } from "@radix-ui/react-slot";
+import { type VariantProps, cva } from "class-variance-authority";
+import { PanelLeft } from "lucide-react";
+import {
+  type CSSProperties,
+  type ComponentProps,
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+
 import { Button } from "@repo/design-system/components/ui/button";
 import { Input } from "@repo/design-system/components/ui/input";
 import { Separator } from "@repo/design-system/components/ui/separator";
@@ -14,18 +27,6 @@ import {
 } from "@repo/design-system/components/ui/tooltip";
 import { useIsMobile } from "@repo/design-system/hooks/use-mobile";
 import { cn } from "@repo/design-system/lib/utils";
-import { type VariantProps, cva } from "class-variance-authority";
-import { PanelLeft } from "lucide-react";
-import {
-  type CSSProperties,
-  type ComponentProps,
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;

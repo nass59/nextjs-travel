@@ -9,9 +9,10 @@ import {
   Trigger,
   Viewport,
 } from "@radix-ui/react-navigation-menu";
-import { cn } from "@repo/design-system/lib/utils";
 import { cva } from "class-variance-authority";
 import type { ComponentProps } from "react";
+
+import { cn } from "@repo/design-system/lib/utils";
 
 // NavigationMenu
 type NavigationMenuProps = ComponentProps<typeof Root>;

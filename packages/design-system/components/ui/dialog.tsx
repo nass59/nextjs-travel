@@ -11,8 +11,9 @@ import {
   Trigger,
 } from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
-import { cn } from "@repo/design-system/lib/utils";
 import type { ComponentProps } from "react";
+
+import { cn } from "@repo/design-system/lib/utils";
 
 // Dialog
 const Dialog = Root;

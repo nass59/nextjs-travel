@@ -22,8 +22,9 @@ import {
   ChevronRightIcon,
   DotFilledIcon,
 } from "@radix-ui/react-icons";
-import { cn } from "@repo/design-system/lib/utils";
 import type { ComponentProps } from "react";
+
+import { cn } from "@repo/design-system/lib/utils";
 
 // DropdownMenu
 const DropdownMenu = Root;

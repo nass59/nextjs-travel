@@ -22,8 +22,9 @@ import {
   Value,
   Viewport,
 } from "@radix-ui/react-select";
+import type { ComponentProps } from "react";
+
 import { cn } from "@repo/design-system/lib/utils";
-import type * as React from "react";
 
 // Select
 const Select = Root;
@@ -35,7 +36,7 @@ const SelectGroup = Group;
 const SelectValue = Value;
 
 // SelectTrigger
-type SelectTriggerProps = React.ComponentProps<typeof Trigger>;
+type SelectTriggerProps = ComponentProps<typeof Trigger>;
 
 const SelectTrigger = ({
   className,
@@ -59,7 +60,7 @@ const SelectTrigger = ({
 );
 
 // SelectScrollUpButton
-type SelectScrollUpButtonProps = React.ComponentProps<typeof ScrollUpButton>;
+type SelectScrollUpButtonProps = ComponentProps<typeof ScrollUpButton>;
 
 const SelectScrollUpButton = ({
   className,
@@ -79,9 +80,7 @@ const SelectScrollUpButton = ({
 );
 
 // SelectScrollDownButton
-type SelectScrollDownButtonProps = React.ComponentProps<
-  typeof ScrollDownButton
->;
+type SelectScrollDownButtonProps = ComponentProps<typeof ScrollDownButton>;
 
 const SelectScrollDownButton = ({
   className,
@@ -101,7 +100,7 @@ const SelectScrollDownButton = ({
 );
 
 // SelectContent
-type SelectContentProps = React.ComponentProps<typeof Content>;
+type SelectContentProps = ComponentProps<typeof Content>;
 
 const SelectContent = ({
   className,
@@ -138,7 +137,7 @@ const SelectContent = ({
 );
 
 // SelectLabel
-type SelectLabelProps = React.ComponentProps<typeof Label>;
+type SelectLabelProps = ComponentProps<typeof Label>;
 
 const SelectLabel = ({ className, ref, ...props }: SelectLabelProps) => (
   <Label
@@ -149,7 +148,7 @@ const SelectLabel = ({ className, ref, ...props }: SelectLabelProps) => (
 );
 
 // SelectItem
-type SelectItemProps = React.ComponentProps<typeof Item>;
+type SelectItemProps = ComponentProps<typeof Item>;
 
 const SelectItem = ({
   className,
@@ -175,7 +174,7 @@ const SelectItem = ({
 );
 
 // SelectSeparator
-type SelectSeparatorProps = React.ComponentProps<typeof Separator>;
+type SelectSeparatorProps = ComponentProps<typeof Separator>;
 
 const SelectSeparator = ({
   className,

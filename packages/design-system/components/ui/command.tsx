@@ -2,13 +2,14 @@
 
 import type { DialogProps } from "@radix-ui/react-dialog";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import { Command as CommandPrimitive } from "cmdk";
+import type { ComponentProps, HTMLAttributes } from "react";
+
 import {
   Dialog,
   DialogContent,
 } from "@repo/design-system/components/ui/dialog";
 import { cn } from "@repo/design-system/lib/utils";
-import { Command as CommandPrimitive } from "cmdk";
-import type { ComponentProps, HTMLAttributes } from "react";
 
 // Command
 type CommandProps = ComponentProps<typeof CommandPrimitive>;

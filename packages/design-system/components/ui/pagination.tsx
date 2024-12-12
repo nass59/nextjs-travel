@@ -3,12 +3,13 @@ import {
   ChevronRightIcon,
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
+import type { ComponentProps } from "react";
+
 import {
   type ButtonProps,
   buttonVariants,
 } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
-import type { ComponentProps } from "react";
 
 // Pagination
 type PaginationProps = ComponentProps<"nav">;

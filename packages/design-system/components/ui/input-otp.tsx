@@ -1,9 +1,10 @@
 "use client";
 
 import { MinusIcon } from "@radix-ui/react-icons";
-import { cn } from "@repo/design-system/lib/utils";
 import { OTPInput, OTPInputContext } from "input-otp";
 import { type ComponentProps, useContext } from "react";
+
+import { cn } from "@repo/design-system/lib/utils";
 
 // InputOTP
 type InputOTPProps = ComponentProps<typeof OTPInput>;

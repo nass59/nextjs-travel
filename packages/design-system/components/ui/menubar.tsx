@@ -23,8 +23,9 @@ import {
   SubTrigger,
   Trigger,
 } from "@radix-ui/react-menubar";
-import { cn } from "@repo/design-system/lib/utils";
 import type * as React from "react";
+
+import { cn } from "@repo/design-system/lib/utils";
 
 // Menubar
 const MenubarMenu: typeof Menu = Menu;

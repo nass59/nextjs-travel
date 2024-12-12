@@ -1,9 +1,10 @@
 "use client";
 
 import { DragHandleDots2Icon } from "@radix-ui/react-icons";
-import { cn } from "@repo/design-system/lib/utils";
 import type { ComponentProps } from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
+
+import { cn } from "@repo/design-system/lib/utils";
 
 // ResizablePanelGroup
 type ResizablePanelGroupProps = ComponentProps<typeof PanelGroup>;

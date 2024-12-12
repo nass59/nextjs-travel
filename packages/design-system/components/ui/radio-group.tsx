@@ -2,8 +2,9 @@
 
 import { DotFilledIcon } from "@radix-ui/react-icons";
 import { Indicator, Item, Root } from "@radix-ui/react-radio-group";
-import { cn } from "@repo/design-system/lib/utils";
 import type { ComponentProps } from "react";
+
+import { cn } from "@repo/design-system/lib/utils";
 
 // RadioGroup
 type RadioGroupProps = ComponentProps<typeof Root>;
