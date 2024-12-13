@@ -1,6 +1,12 @@
 "use client";
 
-import { Content, Header, Item, Root, Trigger } from "@radix-ui/react-accordion";
+import {
+  Content,
+  Header,
+  Item,
+  Root,
+  Trigger,
+} from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import type { ComponentProps } from "react";
 
@@ -19,7 +25,12 @@ const AccordionItem = ({ className, ref, ...props }: AccordionItemProps) => (
 // AccordionTrigger
 type AccordionTriggerProps = ComponentProps<typeof Trigger>;
 
-const AccordionTrigger = ({ className, children, ref, ...props }: AccordionTriggerProps) => (
+const AccordionTrigger = ({
+  className,
+  children,
+  ref,
+  ...props
+}: AccordionTriggerProps) => (
   <Header className="flex">
     <Trigger
       ref={ref}
@@ -38,7 +49,12 @@ const AccordionTrigger = ({ className, children, ref, ...props }: AccordionTrigg
 // AccordionContent
 type AccordionContentProps = ComponentProps<typeof Content>;
 
-const AccordionContent = ({ className, children, ref, ...props }: AccordionContentProps) => (
+const AccordionContent = ({
+  className,
+  children,
+  ref,
+  ...props
+}: AccordionContentProps) => (
   <Content
     ref={ref}
     className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
