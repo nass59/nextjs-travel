@@ -1,0 +1,78 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Travelly",
+  "favicon": "/favicon.svg",
+  "theme": "prism",
+  "layout": "topnav",
+  "background": {
+    "style": "windows"
+  },
+  "font": {
+    "headings": {
+      "family": "Poppins"
+    },
+    "body": {
+      "family": "Poppins"
+    }
+  },
+  "sidebar": {
+    "items": "container"
+  },
+  "topbar": {
+    "style": "default"
+  },
+  "colors": {
+    "primary": "#f46a1c",
+    "light": "#facc15",
+    "dark": "#facc15",
+    "anchors": {
+      "from": "#f46a1c",
+      "to": "#f46a1c"
+    }
+  },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://mintlify.com/blog"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "quickstart", "development"]
+    },
+    {
+      "group": "Essentials",
+      "pages": [
+        "essentials/markdown",
+        "essentials/code",
+        "essentials/images",
+        "essentials/settings",
+        "essentials/navigation",
+        "essentials/reusable-snippets"
+      ]
+    },
+    {
+      "group": "API Documentation",
+      "pages": ["api-reference/introduction"]
+    },
+    {
+      "group": "Endpoint Examples",
+      "pages": [
+        "api-reference/endpoint/get",
+        "api-reference/endpoint/create",
+        "api-reference/endpoint/delete"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/nass59/nextjs-travel"
+  }
+}
