@@ -14,10 +14,6 @@ Travelly is a travel application designed to inspire exploration, simplify trip 
 - **Inspiration**: Discover new destinations and travel ideas
 - **Trip Planning**: Easily plan and organize your trips
 - **Effortless Booking**: Streamlined booking process for flights, hotels, and activities
-- **Fast Performance**: Lightning-quick load times powered by Vercel
-- **Modern UI**: Sleek and responsive design using Tailwind CSS
-- **Component Library**: Reusable UI components showcased in Storybook
-- **Comprehensive Docs**: Detailed documentation powered by Mintlify
 
 ## 🛠️ Tech Stack
 
@@ -36,17 +32,15 @@ Travelly is a monorepo managed with Turborepo, consisting of three main applicat
 2. **Storybook** (Vite): UI component library and development environment
 3. **Docs** (Mintlify): Comprehensive project documentation
 
-### Turborepo Configuration
+## 📚 Available Scripts
 
-Our Turborepo is configured with the following tasks:
-
-- `dev`: Starts development servers (not cached, persistent)
-- `build`: Builds all apps and packages, with dependencies on environment variables
-- `typecheck`: Runs type checking across the entire monorepo
-- `format-and-lint`: Formats and lints all files (Biome)
-- `format-and-lint:fix`: Formats and lints all files, fixing issues automatically (Biome)
-- `check-dependencies`: Checks for dependency issues
-- `clean`: Cleans up build artifacts and caches
+- `pnpm run dev`: Start all apps in development mode
+- `pnpm run build`: Build all apps and packages
+- `pnpm run typecheck`: Run typechecking across the entire monorepo
+- `pnpm run format-and-lint`: Format and lint all files
+- `pnpm run format-and-lint:fix`: Format and lint all files, fixing issues automatically
+- `pnpm run check-dependencies`: Check for dependency issues
+- `pnpm run clean`: Clean up all build artifacts and caches
 
 ## 🚦 Getting Started
 
