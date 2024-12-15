@@ -1,4 +1,3 @@
-import { fonts } from "@repo/design-system/lib/fonts";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import type { ReactNode } from "react";
@@ -23,7 +22,7 @@ type RootLayoutProperties = {
 
 export default function RootLayout({ children }: RootLayoutProperties) {
   return (
-    <html lang="en" className={fonts}>
+    <html lang="en">
       <body className={`${poppins.variable} font-sans`}>{children}</body>
     </html>
   );
