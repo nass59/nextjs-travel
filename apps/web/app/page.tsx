@@ -1,9 +1,9 @@
-import { Start } from "@/components/cta/start";
-import { Destinations } from "@/components/destinations/destinations";
-import { Featured } from "@/components/featured/featured";
-import { Footer } from "@/components/footer/footer";
-import { Header } from "@/components/header/header";
-import { Hero } from "@/components/hero/hero";
+import { Start } from "@/features/homepage/components/cta/start";
+import { Destinations } from "@/features/homepage/components/destinations/destinations";
+import { Featured } from "@/features/homepage/components/featured/featured";
+import { Footer } from "@/features/homepage/components/footer/footer";
+import { Header } from "@/features/homepage/components/header/header";
+import { Hero } from "@/features/homepage/components/hero/hero";
 
 export default function Home() {
   return (
