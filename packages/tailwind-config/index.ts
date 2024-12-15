@@ -83,8 +83,8 @@ export const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...defaultTheme.fontFamily.sans],
-        mono: ["var(--font-geist-mono)", ...defaultTheme.fontFamily.mono],
+        sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-poppins)", ...defaultTheme.fontFamily.mono],
       },
       keyframes: {
         "accordion-down": {
