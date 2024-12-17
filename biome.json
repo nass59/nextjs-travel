@@ -1,10 +1,25 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "formatter": {
+    "enabled": true,
     "useEditorconfig": true,
-    "lineWidth": 80
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80,
+    "attributePosition": "auto",
+    "bracketSpacing": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": []
+  },
+  "organizeImports": {
+    "enabled": true
   },
   "linter": {
+    "enabled": true,
     "rules": {
       "all": true,
       "a11y": {
@@ -64,9 +79,13 @@
     "formatter": {
       "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
-      "quoteStyle": "double",
+      "trailingCommas": "es5",
       "semicolons": "always",
-      "trailingCommas": "es5"
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "quoteStyle": "double",
+      "attributePosition": "auto",
+      "bracketSpacing": true
     }
   },
   "vcs": {
