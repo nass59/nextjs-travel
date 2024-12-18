@@ -19,12 +19,6 @@ const nextConfig: NextConfig = {
      * @doc https://nextjs.org/docs/app/api-reference/config/next-config-js/reactCompiler
      */
     reactCompiler: true,
-    /**
-     * Experimental support for using Lightning CSS, a fast CSS bundler and minifier, written in Rust.
-     *
-     * @doc https://nextjs.org/docs/app/api-reference/config/next-config-js/useLightningcss
-     */
-    useLightningcss: true,
   },
   images: {
     remotePatterns: [
