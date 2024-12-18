@@ -1,6 +1,8 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import { fonts } from "@repo/design-system/lib/fonts";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+
 import "@repo/design-system/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -15,8 +17,10 @@ type RootLayoutProperties = {
 
 export default function RootLayout({ children }: RootLayoutProperties) {
   return (
-    <html lang="en" className={fonts}>
-      <body>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className={fonts}>
+        <body>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
