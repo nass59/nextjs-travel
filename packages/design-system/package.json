@@ -4,7 +4,7 @@
   "private": true,
   "exports": {
     "./globals.css": "./styles/globals.css",
-    "./postcss.config": "./postcss.config.mjs",
+    "./postcss.config.mjs": "./postcss.config.mjs",
     "./lib/*": "./lib/*.ts",
     "./hooks/*": "./hooks/*.ts",
     "./components/*": "./components/*.tsx"
