@@ -10,15 +10,6 @@ const nextConfig: NextConfig = {
      * @doc https://nextjs.org/docs/app/api-reference/config/next-config-js/authInterrupts
      */
     authInterrupts: true,
-    /**
-     * Next.js 15 introduced support for the React Compiler.
-     * The compiler improves performance by automatically optimizing component rendering.
-     * This reduces the amount of manual memoization developers have to do through APIs
-     * such as useMemo and useCallback.
-     *
-     * @doc https://nextjs.org/docs/app/api-reference/config/next-config-js/reactCompiler
-     */
-    reactCompiler: true,
   },
   images: {
     remotePatterns: [
