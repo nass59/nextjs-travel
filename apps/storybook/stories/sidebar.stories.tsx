@@ -1,3 +1,4 @@
+import { useState, type ElementType } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import {
   AudioWaveform,
@@ -14,7 +15,6 @@ import {
   Frame,
   GalleryVerticalEnd,
   LogOut,
-  type LucideIcon,
   Map,
   MoreHorizontal,
   PieChart,
@@ -23,6 +23,7 @@ import {
   Sparkles,
   SquareTerminal,
   Trash2,
+  type LucideIcon,
 } from "lucide-react";
 
 import {
@@ -74,7 +75,6 @@ import {
   SidebarTrigger,
 } from "@repo/design-system/components/ui/sidebar";
 import { Skeleton } from "@repo/design-system/components/ui/skeleton";
-import { type ElementType, useState } from "react";
 
 const meta: Meta<typeof Sidebar> = {
   title: "ui/Sidebar",
@@ -239,7 +239,7 @@ const TeamSwitcher = ({ teams }: TeamSwitcherProps) => {
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
-              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+              <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
                 <activeTeam.logo className="size-4" />
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
@@ -275,10 +275,10 @@ const TeamSwitcher = ({ teams }: TeamSwitcherProps) => {
             ))}
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2 p-2">
-              <div className="flex size-6 items-center justify-center rounded-md border bg-background">
+              <div className="bg-background flex size-6 items-center justify-center rounded-md border">
                 <Plus className="size-4" />
               </div>
-              <div className="font-medium text-muted-foreground">Add team</div>
+              <div className="text-muted-foreground font-medium">Add team</div>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

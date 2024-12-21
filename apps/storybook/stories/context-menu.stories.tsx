@@ -29,7 +29,7 @@ const meta = {
   },
   render: (args) => (
     <ContextMenu {...args}>
-      <ContextMenuTrigger className="flex h-48 w-96 items-center justify-center rounded-md border border-dashed bg-accent text-sm">
+      <ContextMenuTrigger className="bg-accent flex h-48 w-96 items-center justify-center rounded-md border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-32">
@@ -57,7 +57,7 @@ export const Default: Story = {};
 export const WithShortcuts: Story = {
   render: (args) => (
     <ContextMenu {...args}>
-      <ContextMenuTrigger className="flex h-48 w-96 items-center justify-center rounded-md border border-dashed bg-accent text-sm">
+      <ContextMenuTrigger className="bg-accent flex h-48 w-96 items-center justify-center rounded-md border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-32">
@@ -84,7 +84,7 @@ export const WithShortcuts: Story = {
 export const WithSubmenu: Story = {
   render: (args) => (
     <ContextMenu {...args}>
-      <ContextMenuTrigger className="flex h-48 w-96 items-center justify-center rounded-md border border-dashed bg-accent text-sm">
+      <ContextMenuTrigger className="bg-accent flex h-48 w-96 items-center justify-center rounded-md border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-32">
@@ -116,7 +116,7 @@ export const WithSubmenu: Story = {
 export const WithCheckboxes: Story = {
   render: (args) => (
     <ContextMenu {...args}>
-      <ContextMenuTrigger className="flex h-48 w-96 items-center justify-center rounded-md border border-dashed bg-accent text-sm">
+      <ContextMenuTrigger className="bg-accent flex h-48 w-96 items-center justify-center rounded-md border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">
@@ -136,7 +136,7 @@ export const WithCheckboxes: Story = {
 export const WithRadioGroup: Story = {
   render: (args) => (
     <ContextMenu {...args}>
-      <ContextMenuTrigger className="flex h-48 w-96 items-center justify-center rounded-md border border-dashed bg-accent text-sm">
+      <ContextMenuTrigger className="bg-accent flex h-48 w-96 items-center justify-center rounded-md border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">

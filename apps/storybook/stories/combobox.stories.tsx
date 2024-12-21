@@ -1,6 +1,6 @@
+import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Check, ChevronsUpDown, MoreHorizontal } from "lucide-react";
-import { useState } from "react";
 
 import { Button } from "@repo/design-system/components/ui/button";
 import {
@@ -234,8 +234,8 @@ export const WithDropdownMenu: Story = {
 
     return (
       <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
-        <p className="font-medium text-sm leading-none">
-          <span className="mr-2 rounded-lg bg-primary px-2 py-1 text-primary-foreground text-xs">
+        <p className="text-sm font-medium leading-none">
+          <span className="bg-primary text-primary-foreground mr-2 rounded-lg px-2 py-1 text-xs">
             {label}
           </span>
           <span className="text-muted-foreground">Create a new project</span>

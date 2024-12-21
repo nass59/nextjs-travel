@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { useMemo } from "react";
+import type { Meta, StoryObj } from "@storybook/react";
 import {
   Area,
   AreaChart,
@@ -15,10 +15,10 @@ import {
 } from "recharts";
 
 import {
-  type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
+  type ChartConfig,
 } from "@repo/design-system/components/ui/chart";
 
 const multiSeriesData = [
@@ -246,7 +246,7 @@ export const DoughnutChart: Story = {
                       <tspan
                         x={viewBox.cx}
                         y={viewBox.cy}
-                        className="fill-foreground font-bold text-3xl"
+                        className="fill-foreground text-3xl font-bold"
                       >
                         {totalVisitors.toLocaleString()}
                       </tspan>
