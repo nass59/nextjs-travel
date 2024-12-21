@@ -2,7 +2,10 @@
   "name": "@repo/typescript-config",
   "version": "0.0.0",
   "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "clean": "git clean -xdf .cache .turbo"
+    "clean": "git clean -xdf .turbo"
   }
 }

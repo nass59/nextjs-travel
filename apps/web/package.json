@@ -1,16 +1,18 @@
 {
   "name": "web",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "lint": "next lint --max-warnings 0",
+    "clean": "git clean -xdf .cache .turbo node_modules",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.9.5",
+    "@clerk/nextjs": "^6.9.6",
     "@repo/design-system": "workspace:*",
     "@t3-oss/env-nextjs": "^0.11.1",
     "lucide-react": "^0.468.0",
@@ -20,11 +22,11 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
-    "babel-plugin-react-compiler": "19.0.0-beta-201e55d-20241215",
     "typescript": "5.7.2"
   }
 }
