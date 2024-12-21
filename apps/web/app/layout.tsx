@@ -12,11 +12,11 @@ export const metadata: Metadata = {
     "Discover, explore, and share your travel experiences on Travelly.",
 };
 
-type RootLayoutProperties = {
+type RootLayoutProps = {
   readonly children: ReactNode;
 };
 
-export default function RootLayout({ children }: RootLayoutProperties) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <ClerkProvider>
       <html lang="en" className={fonts}>
