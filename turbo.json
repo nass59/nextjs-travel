@@ -1,6 +1,8 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
+    "//#bump-deps": {},
+    "//#bump-ui": {},
     "//#check-dependencies": {},
     "//#clean": {
       "cache": false

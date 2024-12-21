@@ -1,46 +1,33 @@
 "use client";
 
-import type { ComponentProps } from "react";
-import {
-  Corner,
-  Root,
-  ScrollAreaScrollbar,
-  ScrollAreaThumb,
-  Viewport,
-} from "@radix-ui/react-scroll-area";
+import * as React from "react";
+import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
 
 import { cn } from "@repo/design-system/lib/utils";
 
-// ScrollArea
-type ScrollAreaProps = ComponentProps<typeof Root>;
-
-const ScrollArea = ({
-  className,
-  children,
-  ref,
-  ...props
-}: ScrollAreaProps) => (
-  <Root
+const ScrollArea = React.forwardRef<
+  React.ElementRef<typeof ScrollAreaPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
+>(({ className, children, ...props }, ref) => (
+  <ScrollAreaPrimitive.Root
     ref={ref}
     className={cn("relative overflow-hidden", className)}
     {...props}
   >
-    <Viewport className="h-full w-full rounded-[inherit]">{children}</Viewport>
+    <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
+      {children}
+    </ScrollAreaPrimitive.Viewport>
     <ScrollBar />
-    <Corner />
-  </Root>
-);
+    <ScrollAreaPrimitive.Corner />
+  </ScrollAreaPrimitive.Root>
+));
+ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName;
 
-// ScrollBar
-type ScrollBarProps = ComponentProps<typeof ScrollAreaScrollbar>;
-
-const ScrollBar = ({
-  className,
-  orientation = "vertical",
-  ref,
-  ...props
-}: ScrollBarProps) => (
-  <ScrollAreaScrollbar
+const ScrollBar = React.forwardRef<
+  React.ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,
+  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>
+>(({ className, orientation = "vertical", ...props }, ref) => (
+  <ScrollAreaPrimitive.ScrollAreaScrollbar
     ref={ref}
     orientation={orientation}
     className={cn(
@@ -53,9 +40,9 @@ const ScrollBar = ({
     )}
     {...props}
   >
-    <ScrollAreaThumb className="bg-border relative flex-1 rounded-full" />
-  </ScrollAreaScrollbar>
-);
+    <ScrollAreaPrimitive.ScrollAreaThumb className="bg-border relative flex-1 rounded-full" />
+  </ScrollAreaPrimitive.ScrollAreaScrollbar>
+));
+ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName;
 
-// Exports
 export { ScrollArea, ScrollBar };
