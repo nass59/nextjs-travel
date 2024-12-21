@@ -49,6 +49,7 @@ This will create a static web application in the `storybook-static` directory, w
 This project uses components from shadcn/ui, which are built using Radix UI and Tailwind CSS. To add or customize components:
 
 1. Use the shadcn/ui CLI to add new components (from root):
+
 ```bash
 pnpm dlx shadcn@latest add button -c packages/design-system
 ```

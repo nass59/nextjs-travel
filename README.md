@@ -53,12 +53,14 @@ Travelly is a monorepo managed with Turborepo, consisting of three main applicat
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone git@github.com:nass59/nextjs-travel.git
    cd nextjs-travel
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
@@ -96,6 +98,7 @@ To run the documentation:
 cd apps/docs
 pnpm run dev
 ```
+
 ![Travelly Logo](static/doc.jpeg)
 
 ## 📝 License
