@@ -8,7 +8,7 @@ type SkeletonProps = ComponentProps<"div">;
 const Skeleton = ({ className, ...props }: SkeletonProps) => {
   return (
     <div
-      className={cn("animate-pulse rounded-md bg-primary/10", className)}
+      className={cn("bg-primary/10 animate-pulse rounded-md", className)}
       {...props}
     />
   );

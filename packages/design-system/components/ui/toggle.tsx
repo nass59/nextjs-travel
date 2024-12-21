@@ -1,8 +1,8 @@
 "use client";
 
-import { Root } from "@radix-ui/react-toggle";
-import { type VariantProps, cva } from "class-variance-authority";
 import type { ComponentProps } from "react";
+import { Root } from "@radix-ui/react-toggle";
+import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@repo/design-system/lib/utils";
 

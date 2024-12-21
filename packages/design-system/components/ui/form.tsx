@@ -1,15 +1,15 @@
 "use client";
 
+import { createContext, useContext, useId, type ComponentProps } from "react";
 import type * as LabelPrimitive from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
-import { type ComponentProps, createContext, useContext, useId } from "react";
 import {
   Controller,
+  FormProvider,
+  useFormContext,
   type ControllerProps,
   type FieldPath,
   type FieldValues,
-  FormProvider,
-  useFormContext,
 } from "react-hook-form";
 
 import { Label } from "@repo/design-system/components/ui/label";
@@ -140,7 +140,7 @@ const FormDescription = ({
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-[0.8rem] text-muted-foreground", className)}
+      className={cn("text-muted-foreground text-[0.8rem]", className)}
       {...props}
     />
   );
@@ -166,7 +166,7 @@ const FormMessage = ({
     <p
       ref={ref}
       id={formMessageId}
-      className={cn("font-medium text-[0.8rem] text-destructive", className)}
+      className={cn("text-destructive text-[0.8rem] font-medium", className)}
       {...props}
     >
       {body}

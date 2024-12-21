@@ -1,13 +1,13 @@
+import type { ComponentProps } from "react";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
-import type { ComponentProps } from "react";
 
 import {
-  type ButtonProps,
   buttonVariants,
+  type ButtonProps,
 } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
 

@@ -1,8 +1,8 @@
 "use client";
 
+import { createContext, useContext, type ComponentProps } from "react";
 import { Item, Root } from "@radix-ui/react-toggle-group";
 import type { VariantProps } from "class-variance-authority";
-import { type ComponentProps, createContext, useContext } from "react";
 
 import { toggleVariants } from "@repo/design-system/components/ui/toggle";
 import { cn } from "@repo/design-system/lib/utils";

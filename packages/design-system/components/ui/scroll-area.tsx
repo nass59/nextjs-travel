@@ -1,5 +1,6 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import {
   Corner,
   Root,
@@ -7,7 +8,6 @@ import {
   ScrollAreaThumb,
   Viewport,
 } from "@radix-ui/react-scroll-area";
-import type { ComponentProps } from "react";
 
 import { cn } from "@repo/design-system/lib/utils";
 
@@ -53,7 +53,7 @@ const ScrollBar = ({
     )}
     {...props}
   >
-    <ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
+    <ScrollAreaThumb className="bg-border relative flex-1 rounded-full" />
   </ScrollAreaScrollbar>
 );
 
