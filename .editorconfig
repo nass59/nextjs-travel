@@ -10,15 +10,3 @@ indent_size = 2
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
-
-# JavaScript files
-[*.{js,tsx,ts}]
-arrow_parens = avoid
-bracket_same_line = false
-bracket_spacing = true
-jsx_single_quote = false
-print_width = 80
-semi = false
-single_quote = false
-tab_width = 2
-trailing_comma = es5
