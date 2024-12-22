@@ -26,18 +26,37 @@ type UserAvatarProps = {
   user: User;
 };
 
-const UserAvatar = ({ user }: UserAvatarProps) => (
-  <Avatar className="h-8 w-8 rounded-lg">
-    {user.hasImage ? (
+const UserAvatar = ({ user }: UserAvatarProps) => {
+  if (!user.hasImage) {
+    return (
+      <Avatar className="h-8 w-8 rounded-lg">
+        <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+      </Avatar>
+    );
+  }
+
+  const { imageUrl } = user;
+  const params = new URLSearchParams(imageUrl);
+
+  /**
+   * Resize the image to 64x64 pixels with a quality of 100.
+   * @doc https://clerk.com/docs/guides/image-optimization/imageurl-image-optimization
+   */
+  params.set("height", "64");
+  params.set("width", "64");
+  params.set("quality", "100");
+
+  const imageSrc = `${imageUrl}?${String(params)}`;
+
+  return (
+    <Avatar className="h-8 w-8 rounded-lg">
       <AvatarImage
-        src={user.imageUrl}
-        alt={user.username || "User profile picture"}
+        src={imageSrc}
+        alt={String(user.publicMetadata.pseudo) || "User profile picture"}
       />
-    ) : (
-      <AvatarFallback className="rounded-lg">CN</AvatarFallback>
-    )}
-  </Avatar>
-);
+    </Avatar>
+  );
+};
 
 export const NavUser = async () => {
   const user = await currentUser();
@@ -54,7 +73,9 @@ export const NavUser = async () => {
             <SidebarMenuButton size="lg">
               <UserAvatar user={user} />
               <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-semibold">{user.firstName}</span>
+                <span className="truncate font-semibold">
+                  {String(user.publicMetadata.pseudo)}
+                </span>
                 <span className="truncate text-xs">
                   {user.emailAddresses[0].emailAddress}
                 </span>
@@ -73,7 +94,7 @@ export const NavUser = async () => {
                 <UserAvatar user={user} />
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">
-                    {user.username}
+                    {String(user.publicMetadata.pseudo)}
                   </span>
                   <span className="truncate text-xs">
                     {user.emailAddresses[0].emailAddress}

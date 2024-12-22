@@ -1,6 +1,10 @@
 import { NextResponse, type NextMiddleware } from "next/server";
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
+/**
+ * Middleware to protect private routes and redirect users to the onboarding flow.
+ * @doc https://clerk.com/docs/guides/add-onboarding-flow
+ */
 const isOnboardingRoute = createRouteMatcher(["/onboarding"]);
 const isPublicRoute = createRouteMatcher(["/sign-in(.*)", "/sign-up(.*)"]);
 
