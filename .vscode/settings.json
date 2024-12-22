@@ -8,7 +8,7 @@
     ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
+    // "source.fixAll": "explicit",
     "source.fixAll.eslint": "explicit"
   },
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
