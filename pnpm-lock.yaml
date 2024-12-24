@@ -377,8 +377,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       eslint-plugin-react:
-        specifier: ^7.37.2
-        version: 7.37.2(eslint@9.17.0(jiti@1.21.7))
+        specifier: ^7.37.3
+        version: 7.37.3(eslint@9.17.0(jiti@1.21.7))
       eslint-plugin-react-hooks:
         specifier: ^5.1.0
         version: 5.1.0(eslint@9.17.0(jiti@1.21.7))
@@ -1946,8 +1946,8 @@ packages:
     peerDependencies:
       storybook: ^8.4.7
 
-  '@storybook/csf@0.1.12':
-    resolution: {integrity: sha512-9/exVhabisyIVL0VxTCxo01Tdm8wefIXKXfltAPTSr8cbLn5JAxGQ6QV3mjdecLGEOucfoVhAKtJfVHxEK1iqw==}
+  '@storybook/csf@0.1.13':
+    resolution: {integrity: sha512-7xOOwCLGB3ebM87eemep89MYRFTko+D8qE7EdAAq74lgdqRR5cOUtYWJLjO2dLtP94nqoOdHJo6MdLLKzg412Q==}
 
   '@storybook/global@5.0.0':
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
@@ -2795,8 +2795,8 @@ packages:
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
 
-  eslint-plugin-react@7.37.2:
-    resolution: {integrity: sha512-EsTAnj9fLVr/GZleBLFbj/sSuXeWmp1eXIN60ceYnZveqEaUCyW4X+Vh4WTdUhCkW4xutXYqTXCUSyqD4rB75w==}
+  eslint-plugin-react@7.37.3:
+    resolution: {integrity: sha512-DomWuTQPFYZwF/7c9W2fkKkStqZmBd3uugfqBYLdkZ3Hii23WzZuOLUskGxB8qkSKqftxEeGL1TB2kMhrce0jA==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
@@ -5755,7 +5755,7 @@ snapshots:
 
   '@storybook/blocks@8.4.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7(prettier@3.4.2))':
     dependencies:
-      '@storybook/csf': 0.1.12
+      '@storybook/csf': 0.1.13
       '@storybook/icons': 1.3.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       storybook: 8.4.7(prettier@3.4.2)
       ts-dedent: 2.2.0
@@ -5777,7 +5777,7 @@ snapshots:
 
   '@storybook/core@8.4.7(prettier@3.4.2)':
     dependencies:
-      '@storybook/csf': 0.1.12
+      '@storybook/csf': 0.1.13
       better-opn: 3.0.2
       browser-assert: 1.2.1
       esbuild: 0.24.2
@@ -5800,7 +5800,7 @@ snapshots:
       storybook: 8.4.7(prettier@3.4.2)
       unplugin: 1.16.0
 
-  '@storybook/csf@0.1.12':
+  '@storybook/csf@0.1.13':
     dependencies:
       type-fest: 2.19.0
 
@@ -5869,7 +5869,7 @@ snapshots:
 
   '@storybook/test@8.4.7(storybook@8.4.7(prettier@3.4.2))':
     dependencies:
-      '@storybook/csf': 0.1.12
+      '@storybook/csf': 0.1.13
       '@storybook/global': 5.0.0
       '@storybook/instrumenter': 8.4.7(storybook@8.4.7(prettier@3.4.2))
       '@testing-library/dom': 10.4.0
@@ -6795,7 +6795,7 @@ snapshots:
     dependencies:
       eslint: 9.17.0(jiti@1.21.7)
 
-  eslint-plugin-react@7.37.2(eslint@9.17.0(jiti@1.21.7)):
+  eslint-plugin-react@7.37.3(eslint@9.17.0(jiti@1.21.7)):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlast: 1.2.5
