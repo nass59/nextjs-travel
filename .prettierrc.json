@@ -24,6 +24,6 @@
   "semi": true,
   "singleQuote": false,
   "tabWidth": 2,
-  "tailwindConfig": "./packages/tailwind-config/index.ts",
+  "tailwindConfig": "./packages/tailwind-config/config.ts",
   "trailingComma": "es5"
 }

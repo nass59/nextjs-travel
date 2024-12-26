@@ -8,14 +8,12 @@
     ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
   "editor.codeActionsOnSave": {
-    // "source.fixAll": "explicit",
     "source.fixAll.eslint": "explicit"
   },
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
-  "emmet.showExpandedAbbreviation": "never",
   "prettier.enable": true,
-  "tailwindCSS.experimental.configFile": "./packages/tailwind-config/index.ts",
+  "tailwindCSS.experimental.configFile": "./packages/tailwind-config/config.ts",
   "typescript.tsdk": "node_modules/typescript/lib"
 }
