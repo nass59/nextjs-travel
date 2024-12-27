@@ -9,7 +9,6 @@ import { Button } from "@repo/design-system/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -40,13 +39,10 @@ export const SearchUsers = () => {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel>Search user</FormLabel>
                 <FormControl>
                   <Input placeholder="username" {...field} />
                 </FormControl>
-                <FormDescription>
-                  This is the public display name.
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}

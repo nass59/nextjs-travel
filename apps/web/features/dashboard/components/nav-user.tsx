@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { SignOutButton } from "@clerk/nextjs";
 import { currentUser, type User } from "@clerk/nextjs/server";
-import { ChevronsUpDown, LogOut } from "lucide-react";
+import { ChevronsUpDown, LogOut, UserCircle } from "lucide-react";
 
 import {
   Avatar,
@@ -103,14 +104,25 @@ export const NavUser = async () => {
               </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
+            <DropdownMenuLabel>Manage account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <Link
+                href="/dashboard/profile"
+                className="flex w-full items-center justify-start gap-2 text-sm font-medium"
+              >
+                <UserCircle className="h-4 w-4" /> My profile
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
             <DropdownMenuItem>
               <SignOutButton>
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="w-full justify-start p-0"
+                  className="w-full justify-start p-0 text-red-500"
                 >
-                  <LogOut />
+                  <LogOut className="h-4 w-4" />
                   Log out
                 </Button>
               </SignOutButton>

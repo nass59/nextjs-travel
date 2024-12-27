@@ -25,7 +25,7 @@ export const completeOnboardingAction = async (
     const rawData = Object.fromEntries(formData);
     const validatedData = OnboardingSchema.parse(rawData);
 
-    await client.users.updateUser(userId, {
+    await client.users.updateUserMetadata(userId, {
       publicMetadata: {
         onboardingComplete: true,
         pseudo: validatedData.pseudo,

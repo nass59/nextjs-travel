@@ -51,7 +51,10 @@ export const NavMain = () => {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton>
-              <Link href="/dashboard" className="flex items-center gap-2">
+              <Link
+                href="/dashboard"
+                className="flex w-full items-center gap-2"
+              >
                 <Home className="h-4 w-4" />
                 <span>Home</span>
               </Link>
