@@ -15,5 +15,14 @@
   "editor.formatOnSave": true,
   "prettier.enable": true,
   "tailwindCSS.experimental.configFile": "./packages/tailwind-config/config.ts",
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.next": true
+  }
 }
