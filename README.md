@@ -26,6 +26,7 @@ Travelly is a travel application designed to inspire exploration, simplify trip 
 - 🔒 **Authentication**: Clerk
 
 ## 🏗️ Project Structure
+
 Travelly is a monorepo managed with Turborepo, consisting of three main applications:
 
 1. **Web App** (Next.js): The main Travelly application
