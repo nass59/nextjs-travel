@@ -3,8 +3,11 @@ import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import { fonts } from "@repo/design-system/lib/fonts";
+import { cn } from "@repo/design-system/lib/utils";
 
 import "@repo/design-system/styles/globals.css";
+
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Travelly - Share Your Journey, Inspire the World",
@@ -19,8 +22,21 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <ClerkProvider>
-      <html lang="en" className={fonts}>
-        <body>{children}</body>
+      <html
+        lang="en"
+        className={cn(fonts, "scroll-smooth")}
+        suppressHydrationWarning
+      >
+        <body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
       </html>
     </ClerkProvider>
   );

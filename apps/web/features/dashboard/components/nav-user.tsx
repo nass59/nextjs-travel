@@ -1,20 +1,18 @@
 import Link from "next/link";
 import { SignOutButton } from "@clerk/nextjs";
-import { currentUser, type User } from "@clerk/nextjs/server";
-import { ChevronsUpDown, LogOut, UserCircle } from "lucide-react";
+import { currentUser } from "@clerk/nextjs/server";
+import { ChevronsUpDown, LogOut } from "lucide-react";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@repo/design-system/components/ui/avatar";
+import { Badge } from "@repo/design-system/components/ui/badge";
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
+  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@repo/design-system/components/ui/dropdown-menu";
 import {
@@ -23,42 +21,17 @@ import {
   SidebarMenuItem,
 } from "@repo/design-system/components/ui/sidebar";
 
-type UserAvatarProps = {
-  user: User;
-};
+import { NavUserAvatar } from "./nav-user-avatar";
+import { NavUserInfo } from "./nav-user-info";
 
-const UserAvatar = ({ user }: UserAvatarProps) => {
-  if (!user.hasImage) {
-    return (
-      <Avatar className="h-8 w-8 rounded-lg">
-        <AvatarFallback className="rounded-lg">CN</AvatarFallback>
-      </Avatar>
-    );
-  }
-
-  const { imageUrl } = user;
-  const params = new URLSearchParams(imageUrl);
-
-  /**
-   * Resize the image to 64x64 pixels with a quality of 100.
-   * @doc https://clerk.com/docs/guides/image-optimization/imageurl-image-optimization
-   */
-  params.set("height", "64");
-  params.set("width", "64");
-  params.set("quality", "100");
-
-  const imageSrc = `${imageUrl}?${String(params)}`;
-
-  return (
-    <Avatar className="h-8 w-8 rounded-lg">
-      <AvatarImage
-        src={imageSrc}
-        alt={String(user.publicMetadata.pseudo) || "User profile picture"}
-      />
-    </Avatar>
-  );
-};
-
+/**
+ * NavUser Component
+ *
+ * A server component that displays the current user's avatar in the navigation bar.
+ * Fetches the current user data and renders their profile image or initials.
+ *
+ * @returns A React server component rendering the user's avatar
+ */
 export const NavUser = async () => {
   const user = await currentUser();
 
@@ -66,20 +39,20 @@ export const NavUser = async () => {
     return null;
   }
 
+  const { fullName, emailAddresses } = user;
+
   return (
     <SidebarMenu>
       <SidebarMenuItem>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton size="lg">
-              <UserAvatar user={user} />
+              <NavUserAvatar user={user} />
               <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-semibold">
-                  {String(user.publicMetadata.pseudo)}
-                </span>
-                <span className="truncate text-xs">
-                  {user.emailAddresses[0].emailAddress}
-                </span>
+                <NavUserInfo
+                  fullName={fullName}
+                  emailAddresses={emailAddresses}
+                />
               </div>
               <ChevronsUpDown className="ml-auto size-4" />
             </SidebarMenuButton>
@@ -90,31 +63,37 @@ export const NavUser = async () => {
             align="end"
             sideOffset={4}
           >
-            <DropdownMenuLabel className="p-0 font-normal">
-              <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
-                <UserAvatar user={user} />
-                <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">
-                    {String(user.publicMetadata.pseudo)}
-                  </span>
-                  <span className="truncate text-xs">
-                    {user.emailAddresses[0].emailAddress}
-                  </span>
+            <DropdownMenuLabel>
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex max-w-[144px] flex-col">
+                  <NavUserInfo
+                    fullName={fullName}
+                    emailAddresses={emailAddresses}
+                  />
                 </div>
+                <Badge variant="outline">Beta</Badge>
               </div>
             </DropdownMenuLabel>
+
             <DropdownMenuSeparator />
-            <DropdownMenuLabel>Manage account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <Link
-                href="/dashboard/profile"
-                className="flex w-full items-center justify-start gap-2 text-sm font-medium"
-              >
-                <UserCircle className="h-4 w-4" /> My profile
+
+            <DropdownMenuGroup>
+              <Link href="/dashboard/profile">
+                <DropdownMenuItem className="cursor-pointer">
+                  Account
+                  <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+                </DropdownMenuItem>
               </Link>
-            </DropdownMenuItem>
+
+              <Link href="#">
+                <DropdownMenuItem className="cursor-pointer">
+                  Support
+                </DropdownMenuItem>
+              </Link>
+            </DropdownMenuGroup>
+
             <DropdownMenuSeparator />
+
             <DropdownMenuItem>
               <SignOutButton>
                 <Button
