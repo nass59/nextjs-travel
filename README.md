@@ -29,9 +29,19 @@ Travelly is a travel application designed to inspire exploration, simplify trip 
 
 Travelly is a monorepo managed with Turborepo, consisting of three main applications:
 
-1. **Web App** (Next.js): The main Travelly application
-2. **Storybook** (Vite): UI component library and development environment
-3. **Docs** (Mintlify): Comprehensive project documentation
+```
+.
+├── apps/
+│   ├── docs/          # Documentation (Mintlify)
+│   ├── storybook/     # UI Component development
+│   └── web/           # Main Next.js application
+├── packages/
+│   ├── config/        # Shared configurations
+│   ├── database/      # Database schema and utils
+│   ├── design-system/ # UI component library
+│   └── utils/         # Shared utilities
+└── tooling/           # Development tools
+```
 
 ## 📚 Available Scripts
 
