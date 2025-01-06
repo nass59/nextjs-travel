@@ -59,7 +59,7 @@ Travelly is a monorepo managed with Turborepo, consisting of three main applicat
 
 - Node.js (22 or later)
 - pnpm (9.15)
-- mintlifyç
+- mintlify
 
 ### Installation
 
