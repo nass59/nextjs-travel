@@ -58,7 +58,7 @@ Travelly is a monorepo managed with Turborepo, consisting of three main applicat
 ### Prerequisites
 
 - Node.js (22 or later)
-- pnpm (9.15)
+- pnpm
 - mintlify
 
 ### Installation
@@ -124,7 +124,6 @@ Travelly is licensed under the [MIT License](LICENSE).
 - [Turborepo](https://turbo.build/)
 - [Storybook](https://storybook.js.org/)
 - [Mintlify](https://mintlify.com/)
-- [Clerk](https://clerk.com/)
 
 ---
 
