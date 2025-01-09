@@ -50,7 +50,7 @@ Travelly is a monorepo managed with Turborepo, consisting of three main applicat
 - `pnpm run typecheck`: Run typechecking across the entire monorepo
 - `pnpm run format`: Format all files using Prettier
 - `pnpm run lint`: Lint all files using Eslint
-- `pnpm run check-dependencies`: Check for dependency issues
+- `pnpm run check-dependencies`: Check for dependency issues using Sherif
 - `pnpm run clean`: Clean up all build artifacts and caches
 
 ## 🚦 Getting Started
