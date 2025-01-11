@@ -21,6 +21,7 @@ Travelly is a travel application designed to inspire exploration, simplify trip 
 - 🌍 **Deployment**: Vercel
 - 🎨 **Styling**: Tailwind CSS
 - 🚀 **Monorepo**: Turborepo
+- 🌱 **Database**: MongoDB
 - 👨‍🎨 **UI Development**: Storybook (Vite)
 - 🍵 **Documentation**: Mintlify
 - 🔒 **Authentication**: Clerk
