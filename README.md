@@ -80,9 +80,9 @@ Travelly is a monorepo managed with Turborepo, consisting of three main applicat
 3. Set up environment variables:
    ```bash
    cd apps/web
-   cp .env.example .env
+   cp .env.example .env.local
    ```
-   Edit the `.env` file with your specific configuration.
+   Edit the `.env.local` file with your specific configuration.
 
 ### Development
 
