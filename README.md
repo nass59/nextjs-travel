@@ -38,7 +38,6 @@ Travelly is a monorepo managed with Turborepo, consisting of three main applicat
 │   └── web/           # Main Next.js application
 ├── packages/
 │   ├── config/        # Shared configurations
-│   ├── database/      # Database schema and utils
 │   ├── design-system/ # UI component library
 │   └── utils/         # Shared utilities
 └── tooling/           # Development tools
