@@ -28,7 +28,7 @@ Travelly is a travel application designed to inspire exploration, simplify trip 
 
 ## 🏗️ Project Structure
 
-Travelly is a monorepo managed with Turborepo, consisting of three main applications:
+Travelly is a monorepo managed with Turborepo, consisting of three main applications: Web, Storybook, Docs
 
 ```
 .
