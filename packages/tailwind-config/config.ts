@@ -16,6 +16,7 @@ export const config: Config = {
     "./components/**/*.{ts,tsx}",
     "./lib/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
+    "./src/app/**/*.{ts,tsx}",
     "./providers/**/*.{ts,tsx}",
   ],
   theme: {
