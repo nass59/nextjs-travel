@@ -1,10 +1,9 @@
-import { Button } from "@repo/design-system/components/ui/button";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      <Button>Hello World!</Button>
-      <p className="font-bold text-rose-500">Hello World!</p>
+      <Image src="/nextjs.svg" alt="logo" width={50} height={50} />
     </div>
   );
 }
