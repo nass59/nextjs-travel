@@ -3,8 +3,8 @@ import { SignOutButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import { ChevronsUpDown, LogOut } from "lucide-react";
 
-import { Badge } from "@repo/design-system/components/ui/badge";
-import { Button } from "@repo/design-system/components/ui/button";
+import { Badge } from "@workspace/design-system/components/ui/badge";
+import { Button } from "@workspace/design-system/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,12 +14,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@repo/design-system/components/ui/dropdown-menu";
+} from "@workspace/design-system/components/ui/dropdown-menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@repo/design-system/components/ui/sidebar";
+} from "@workspace/design-system/components/ui/sidebar";
 
 import { NavUserAvatar } from "./nav-user-avatar";
 import { NavUserInfo } from "./nav-user-info";

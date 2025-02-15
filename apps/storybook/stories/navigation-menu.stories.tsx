@@ -8,7 +8,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@repo/design-system/components/ui/navigation-menu";
+} from "@workspace/design-system/components/ui/navigation-menu";
 
 const navigationLinkStyle = navigationMenuTriggerStyle();
 

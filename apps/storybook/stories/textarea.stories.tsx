@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "@repo/design-system/components/ui/button";
-import { Label } from "@repo/design-system/components/ui/label";
-import { Textarea } from "@repo/design-system/components/ui/textarea";
+import { Button } from "@workspace/design-system/components/ui/button";
+import { Label } from "@workspace/design-system/components/ui/label";
+import { Textarea } from "@workspace/design-system/components/ui/textarea";
 
 /**
  * Displays a form textarea or a component that looks like a textarea.

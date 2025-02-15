@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "@repo/design-system/components/ui/button";
+import { Button } from "@workspace/design-system/components/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -10,7 +10,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@repo/design-system/components/ui/drawer";
+} from "@workspace/design-system/components/ui/drawer";
 
 /**
  * A drawer component for React.

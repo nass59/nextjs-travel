@@ -1,13 +1,20 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
-
-import { fonts } from "@repo/design-system/lib/fonts";
-import { cn } from "@repo/design-system/lib/utils";
-
-import "@repo/design-system/styles/globals.css";
-
 import { ThemeProvider } from "next-themes";
+
+import "@workspace/design-system/styles/globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Travelly - Share Your Journey, Inspire the World",
@@ -22,12 +29,10 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <ClerkProvider>
-      <html
-        lang="en"
-        className={cn(fonts, "scroll-smooth")}
-        suppressHydrationWarning
-      >
-        <body>
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/typescript-config/base.json",
+  "extends": "@workspace/typescript-config/base.json",
   "compilerOptions": {
     "baseUrl": ".",
     "module": "ESNext",
@@ -9,7 +9,7 @@
     "noEmit": true,
     "paths": {
       "@/*": ["./*"],
-      "@repo/*": ["../../packages/*"]
+      "@workspace/*": ["../../packages/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "vite.config.ts"],

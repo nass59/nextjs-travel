@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-import { Skeleton } from "@repo/design-system/components/ui/skeleton";
+import { Skeleton } from "@workspace/design-system/components/ui/skeleton";
 
 import { checkRole } from "@/features/auth/utils/roles";
 

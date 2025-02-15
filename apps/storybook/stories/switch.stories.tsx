@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Label } from "@repo/design-system/components/ui/label";
-import { Switch } from "@repo/design-system/components/ui/switch";
+import { Label } from "@workspace/design-system/components/ui/label";
+import { Switch } from "@workspace/design-system/components/ui/switch";
 
 /**
  * A control that allows the user to toggle between checked and not checked.

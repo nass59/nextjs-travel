@@ -5,8 +5,8 @@ import {
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
-} from "@repo/design-system/components/ui/breadcrumb";
-import { Separator } from "@repo/design-system/components/ui/separator";
+} from "@workspace/design-system/components/ui/breadcrumb";
+import { Separator } from "@workspace/design-system/components/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -15,7 +15,7 @@ import {
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from "@repo/design-system/components/ui/sidebar";
+} from "@workspace/design-system/components/ui/sidebar";
 
 import { NavUser } from "@/features/dashboard/components/nav-user";
 import { NavMain } from "@/features/dashboard/components/NavMain";

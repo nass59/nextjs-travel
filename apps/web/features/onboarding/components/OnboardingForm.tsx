@@ -9,17 +9,17 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@repo/design-system/components/ui/alert";
-import { Button } from "@repo/design-system/components/ui/button";
+} from "@workspace/design-system/components/ui/alert";
+import { Button } from "@workspace/design-system/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@repo/design-system/components/ui/card";
-import { Input } from "@repo/design-system/components/ui/input";
-import { Label } from "@repo/design-system/components/ui/label";
+} from "@workspace/design-system/components/ui/card";
+import { Input } from "@workspace/design-system/components/ui/input";
+import { Label } from "@workspace/design-system/components/ui/label";
 
 import { completeOnboardingAction } from "../actions/completeOnboarding.action";
 import { OnboardingActionResponse } from "../types/onboarding";

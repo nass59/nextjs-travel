@@ -3,7 +3,7 @@ import { type User } from "@clerk/nextjs/server";
 import {
   Avatar,
   AvatarFallback,
-} from "@repo/design-system/components/ui/avatar";
+} from "@workspace/design-system/components/ui/avatar";
 
 import { NextAvatar } from "@/components/next-avatar";
 

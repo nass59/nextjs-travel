@@ -8,7 +8,7 @@ import {
   type infer as zInfer,
 } from "zod";
 
-import { Button } from "@repo/design-system/components/ui/button";
+import { Button } from "@workspace/design-system/components/ui/button";
 import {
   Form,
   FormControl,
@@ -17,8 +17,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@repo/design-system/components/ui/form";
-import { Input } from "@repo/design-system/components/ui/input";
+} from "@workspace/design-system/components/ui/form";
+import { Input } from "@workspace/design-system/components/ui/input";
 
 /**
  * Building forms with React Hook Form and Zod.

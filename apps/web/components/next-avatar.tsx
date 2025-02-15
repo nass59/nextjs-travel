@@ -1,4 +1,4 @@
-import { AvatarImage } from "@repo/design-system/components/ui/avatar";
+import { AvatarImage } from "@workspace/design-system/components/ui/avatar";
 
 import { AvatarUrlParams } from "@/types/avatar";
 import { getAvatarUrl } from "@/utils/avatar";

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "@repo/design-system/components/ui/button";
+import { Button } from "@workspace/design-system/components/ui/button";
 import {
   Sheet,
   SheetClose,
@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@repo/design-system/components/ui/sheet";
+} from "@workspace/design-system/components/ui/sheet";
 
 /**
  * Extends the Dialog component to display content that complements the main

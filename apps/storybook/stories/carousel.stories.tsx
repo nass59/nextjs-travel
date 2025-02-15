@@ -6,7 +6,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@repo/design-system/components/ui/carousel";
+} from "@workspace/design-system/components/ui/carousel";
 
 const items = [
   { id: 1, title: "First slide" },

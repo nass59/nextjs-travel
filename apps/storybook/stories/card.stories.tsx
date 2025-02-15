@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { BellRing } from "lucide-react";
 
-import { Button } from "@repo/design-system/components/ui/button";
+import { Button } from "@workspace/design-system/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@repo/design-system/components/ui/card";
+} from "@workspace/design-system/components/ui/card";
 
 const notifications = [
   {

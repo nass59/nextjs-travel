@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { clerkClient } from "@clerk/nextjs/server";
 
-import { Separator } from "@repo/design-system/components/ui/separator";
+import { Separator } from "@workspace/design-system/components/ui/separator";
 import {
   Table,
   TableBody,
@@ -9,7 +9,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@repo/design-system/components/ui/table";
+} from "@workspace/design-system/components/ui/table";
 
 import { SearchUsers } from "@/features/auth/components/SearchUsers";
 import { UserListForm } from "@/features/auth/components/UserListForm";

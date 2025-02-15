@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Check, ChevronsUpDown, MoreHorizontal } from "lucide-react";
 
-import { Button } from "@repo/design-system/components/ui/button";
+import { Button } from "@workspace/design-system/components/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -10,12 +10,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@repo/design-system/components/ui/command";
+} from "@workspace/design-system/components/ui/command";
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@repo/design-system/components/ui/drawer";
+} from "@workspace/design-system/components/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,15 +28,15 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@repo/design-system/components/ui/dropdown-menu";
+} from "@workspace/design-system/components/ui/dropdown-menu";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@repo/design-system/components/ui/popover";
-import { TooltipContent } from "@repo/design-system/components/ui/tooltip";
-import { useIsMobile } from "@repo/design-system/hooks/use-mobile";
-import { cn } from "@repo/design-system/lib/utils";
+} from "@workspace/design-system/components/ui/popover";
+import { TooltipContent } from "@workspace/design-system/components/ui/tooltip";
+import { useIsMobile } from "@workspace/design-system/hooks/use-mobile";
+import { cn } from "@workspace/design-system/lib/utils";
 
 /**
  * A popup that displays information related to an element when the element

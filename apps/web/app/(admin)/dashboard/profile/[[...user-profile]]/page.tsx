@@ -1,4 +1,4 @@
-import { Separator } from "@repo/design-system/components/ui/separator";
+import { Separator } from "@workspace/design-system/components/ui/separator";
 
 import { ProfileMetadata } from "@/features/profile/components/ProfileMetadata";
 import { ProfilePicture } from "@/features/profile/components/ProfilePicture";

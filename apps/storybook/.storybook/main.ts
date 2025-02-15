@@ -11,16 +11,25 @@ const getAbsolutePath = (value: string): string => {
 
 const config: StorybookConfig = {
   stories: ["../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+
   addons: [
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@chromatic-com/storybook"),
     getAbsolutePath("@storybook/addon-interactions"),
   ],
+
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
+
   staticDirs: ["../public"],
+
+  docs: {},
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
+  },
 };
 
 export default config;

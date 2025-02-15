@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { AspectRatio } from "@repo/design-system/components/ui/aspect-ratio";
+import { AspectRatio } from "@workspace/design-system/components/ui/aspect-ratio";
 
 /**
  * Displays content within a desired ratio.

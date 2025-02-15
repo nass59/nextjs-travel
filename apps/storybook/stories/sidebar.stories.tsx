@@ -30,7 +30,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@repo/design-system/components/ui/avatar";
+} from "@workspace/design-system/components/ui/avatar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -38,12 +38,12 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@repo/design-system/components/ui/breadcrumb";
+} from "@workspace/design-system/components/ui/breadcrumb";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@repo/design-system/components/ui/collapsible";
+} from "@workspace/design-system/components/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -53,8 +53,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@repo/design-system/components/ui/dropdown-menu";
-import { Separator } from "@repo/design-system/components/ui/separator";
+} from "@workspace/design-system/components/ui/dropdown-menu";
+import { Separator } from "@workspace/design-system/components/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -73,8 +73,8 @@ import {
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from "@repo/design-system/components/ui/sidebar";
-import { Skeleton } from "@repo/design-system/components/ui/skeleton";
+} from "@workspace/design-system/components/ui/sidebar";
+import { Skeleton } from "@workspace/design-system/components/ui/skeleton";
 
 const meta: Meta<typeof Sidebar> = {
   title: "ui/Sidebar",

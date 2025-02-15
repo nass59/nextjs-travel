@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "@repo/design-system/components/ui/button";
-import { Input } from "@repo/design-system/components/ui/input";
-import { Label } from "@repo/design-system/components/ui/label";
+import { Button } from "@workspace/design-system/components/ui/button";
+import { Input } from "@workspace/design-system/components/ui/input";
+import { Label } from "@workspace/design-system/components/ui/label";
 
 /**
  * Displays a form input field or a component that looks like an input field.

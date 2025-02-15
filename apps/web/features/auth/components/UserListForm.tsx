@@ -3,15 +3,15 @@
 import { useActionState } from "react";
 import { Save } from "lucide-react";
 
-import { Button } from "@repo/design-system/components/ui/button";
-import { Input } from "@repo/design-system/components/ui/input";
+import { Button } from "@workspace/design-system/components/ui/button";
+import { Input } from "@workspace/design-system/components/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@repo/design-system/components/ui/select";
+} from "@workspace/design-system/components/ui/select";
 
 import { Role } from "@/types/global";
 

@@ -1,12 +1,12 @@
 {
-  "extends": "@repo/typescript-config/react-library.json",
+  "extends": "@workspace/typescript-config/react-library.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@repo/*": ["../*"],
-      "@repo/design-system/*": ["./*"]
+      "@workspace/*": ["../*"],
+      "@workspace/design-system/*": ["./src/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

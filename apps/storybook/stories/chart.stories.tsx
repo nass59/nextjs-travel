@@ -19,7 +19,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@repo/design-system/components/ui/chart";
+} from "@workspace/design-system/components/ui/chart";
 
 const multiSeriesData = [
   { month: "January", desktop: 186, mobile: 80 },
