@@ -5,6 +5,7 @@ export const env = createEnv({
   emptyStringAsUndefined: true,
   server: {
     CLERK_SECRET_KEY: z.string(),
+    CLERK_SIGNING_SECRET: z.string(),
     DATABASE_URL: z.string(),
     DATABASE_URL_UNPOOLED: z.string(),
   },
