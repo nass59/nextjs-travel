@@ -9,11 +9,11 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <Suspense fallback={<div>loading...</div>}>
-        <ErrorBoundary fallback={<div>error</div>}>
+      <ErrorBoundary fallback={<div>error</div>}>
+        <Suspense fallback={<div>loading...</div>}>
           <PageClient />
-        </ErrorBoundary>
-      </Suspense>
+        </Suspense>
+      </ErrorBoundary>
     </HydrateClient>
   );
 }

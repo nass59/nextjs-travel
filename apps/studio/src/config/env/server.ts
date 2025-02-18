@@ -8,6 +8,8 @@ export const env = createEnv({
     CLERK_SIGNING_SECRET: z.string(),
     DATABASE_URL: z.string(),
     DATABASE_URL_UNPOOLED: z.string(),
+    UPSTASH_REDIS_REST_URL: z.string(),
+    UPSTASH_REDIS_REST_TOKEN: z.string(),
   },
   experimental__runtimeEnv: process.env,
 });
