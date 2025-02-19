@@ -5,7 +5,7 @@ import { PageClient } from "@/app/(home)/client";
 import { HydrateClient, trpc } from "@/trpc/server";
 
 export default async function Home() {
-  void trpc.hello.prefetch({ text: "world" });
+  void trpc.categories.getMany.prefetch();
 
   return (
     <HydrateClient>
