@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-
-import "@workspace/design-system/styles/globals.css";
-
 import { Geist, Geist_Mono } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 
+import { Toaster } from "@workspace/design-system/components/ui/sonner";
+
 import { TRPCProvider } from "@/trpc/client";
+
+import "@workspace/design-system/styles/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <body>
-          <TRPCProvider>{children}</TRPCProvider>
+          <TRPCProvider>
+            <Toaster />
+            {children}
+          </TRPCProvider>
         </body>
       </html>
     </ClerkProvider>
