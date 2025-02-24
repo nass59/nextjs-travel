@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.11.3",
+    "@mux/mux-node": "^9.0.1",
+    "@mux/mux-uploader-react": "^1.1.2",
     "@neondatabase/serverless": "^0.10.4",
     "@t3-oss/env-nextjs": "^0.12.0",
     "@tanstack/react-query": "^5.66.7",
