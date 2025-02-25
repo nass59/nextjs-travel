@@ -29,6 +29,7 @@
     "@workspace/design-system": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "client-only": "^0.0.1",
+    "date-fns": "^4.1.0",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.39.3",
     "lucide-react": "^0.475.0",
