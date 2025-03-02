@@ -216,6 +216,7 @@ export const DoughnutChart: Story = {
     config: singleSeriesConfig,
   },
   render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const totalVisitors = useMemo(() => {
       return singleSeriesData.reduce((acc, curr) => acc + curr.visitors, 0);
     }, []);

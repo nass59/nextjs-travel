@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Check, ChevronsUpDown, MoreHorizontal } from "lucide-react";
@@ -130,7 +131,6 @@ export const Default: Story = {
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
-            // biome-ignore lint/a11y/useSemanticElements: <explanation>
             variant="outline"
             role="combobox"
             aria-expanded={open}

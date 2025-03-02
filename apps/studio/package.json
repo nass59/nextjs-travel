@@ -15,14 +15,14 @@
     "drizzle:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.11.3",
+    "@clerk/nextjs": "^6.12.2",
     "@hookform/resolvers": "^3.10.0",
     "@mux/mux-node": "^9.0.1",
     "@mux/mux-player-react": "^3.3.0",
     "@mux/mux-uploader-react": "^1.1.2",
     "@neondatabase/serverless": "^0.10.4",
     "@t3-oss/env-nextjs": "^0.12.0",
-    "@tanstack/react-query": "^5.66.7",
+    "@tanstack/react-query": "^5.66.11",
     "@trpc/client": "11.0.0-rc.781",
     "@trpc/react-query": "11.0.0-rc.781",
     "@trpc/server": "11.0.0-rc.781",
@@ -36,7 +36,7 @@
     "drizzle-orm": "^0.39.3",
     "drizzle-zod": "^0.7.0",
     "lucide-react": "^0.475.0",
-    "next": "^15.1.7",
+    "next": "^15.2.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-error-boundary": "^5.0.0",
@@ -44,19 +44,19 @@
     "server-only": "^0.0.1",
     "sonner": "^1.7.4",
     "superjson": "^2.2.2",
-    "svix": "^1.57.0",
-    "tailwindcss": "^4.0.6",
+    "svix": "^1.61.0",
+    "tailwindcss": "^4.0.9",
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@types/node": "^22.13.4",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
+    "@types/node": "^22.13.8",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
     "concurrently": "^9.1.2",
-    "drizzle-kit": "^0.30.4",
-    "postcss": "^8.5.2",
-    "typescript": "^5.7.3"
+    "drizzle-kit": "^0.30.5",
+    "postcss": "^8.5.3",
+    "typescript": "^5.8.2"
   }
 }
