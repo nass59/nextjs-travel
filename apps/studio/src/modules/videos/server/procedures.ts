@@ -64,6 +64,7 @@ export const videosRouter = createTRPCRouter({
     const { id: userId } = ctx.user;
 
     const upload = await mux.video.uploads.create({
+      cors_origin: "*",
       new_asset_settings: {
         passthrough: userId,
         playback_policy: ["public"],
@@ -78,7 +79,6 @@ export const videosRouter = createTRPCRouter({
           },
         ],
       },
-      cors_origin: "*",
     });
 
     const [video] = await db
