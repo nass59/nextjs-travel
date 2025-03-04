@@ -40,7 +40,7 @@
     "@vitejs/plugin-react-swc": "^3.8.0",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
-    "chromatic": "^11.26.1",
+    "chromatic": "^11.27.0",
     "cross-env": "^7.0.3",
     "postcss": "^8.5.3",
     "storybook": "^8.6.3",
