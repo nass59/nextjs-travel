@@ -45,7 +45,7 @@ export const NextAvatar = ({
   return (
     <AvatarImage
       src={avatarUrl}
-      alt={alt ?? DEFAULT_AVATAR_CONFIG.alt}
+      alt={alt || DEFAULT_AVATAR_CONFIG.alt}
       className="h-full w-full object-cover"
     />
   );

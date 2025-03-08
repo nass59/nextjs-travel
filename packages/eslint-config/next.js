@@ -1,11 +1,9 @@
-import js from "@eslint/js";
-import eslintConfigPrettier from "eslint-config-prettier";
-import tseslint from "typescript-eslint";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import pluginReact from "eslint-plugin-react";
 import globals from "globals";
 import pluginNext from "@next/eslint-plugin-next";
 import { config as baseConfig } from "./base.js";
+
 
 /**
  * A custom ESLint configuration for libraries that use Next.js.
@@ -13,11 +11,19 @@ import { config as baseConfig } from "./base.js";
  * @type {import("eslint").Linter.Config}
  * */
 export const nextJsConfig = [
-  ...baseConfig,
-  js.configs.recommended,
-  eslintConfigPrettier,
-  ...tseslint.configs.recommended,
   {
+    name: 'travelly/next/ignored-files',
+    ignores: [
+      '.next/**/*',
+      'public/**/*',
+    ],
+  },
+
+  ...baseConfig,
+
+  // Globals configuration
+  {
+    name: 'travelly/globals',
     ...pluginReact.configs.flat.recommended,
     languageOptions: {
       ...pluginReact.configs.flat.recommended.languageOptions,
@@ -26,7 +32,10 @@ export const nextJsConfig = [
       },
     },
   },
+
+  // Next.js configurations
   {
+    name: 'travelly/next',
     plugins: {
       "@next/next": pluginNext,
     },
@@ -35,7 +44,10 @@ export const nextJsConfig = [
       ...pluginNext.configs["core-web-vitals"].rules,
     },
   },
+
+  // React configurations
   {
+    name: 'travelly/react-hooks',
     plugins: {
       "react-hooks": pluginReactHooks,
     },

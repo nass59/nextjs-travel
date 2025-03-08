@@ -13,6 +13,7 @@ export const env = createEnv({
     MUX_WEBHOOK_SECRET: z.string(),
     UPSTASH_REDIS_REST_URL: z.string(),
     UPSTASH_REDIS_REST_TOKEN: z.string(),
+    UPLOADTHING_TOKEN: z.string(),
   },
   experimental__runtimeEnv: process.env,
 });

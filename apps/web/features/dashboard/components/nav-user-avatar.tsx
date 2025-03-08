@@ -35,7 +35,7 @@ const AvatarDisplay = ({ user, size }: AvatarDisplayProps) => (
         src={user.imageUrl}
         height={size}
         width={size}
-        alt={user?.fullName ?? "User avatar"}
+        alt={user?.fullName || "User avatar"}
       />
     )}
     <AvatarFallback>

@@ -1,10 +1,10 @@
 import js from "@eslint/js";
-import eslintConfigPrettier from "eslint-config-prettier";
 import tseslint from "typescript-eslint";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import pluginReact from "eslint-plugin-react";
 import globals from "globals";
 import { config as baseConfig } from "./base.js";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 /**
  * A custom ESLint configuration for libraries that use React.
@@ -13,7 +13,6 @@ import { config as baseConfig } from "./base.js";
 export const config = [
   ...baseConfig,
   js.configs.recommended,
-  eslintConfigPrettier,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
@@ -36,4 +35,5 @@ export const config = [
       "react/react-in-jsx-scope": "off",
     },
   },
+  eslintConfigPrettier,
 ];

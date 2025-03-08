@@ -7,6 +7,7 @@ import type {
   VideoAssetTrackReadyWebhookEvent,
 } from "@mux/mux-node/resources/webhooks.mjs";
 import { eq } from "drizzle-orm";
+import { UTApi } from "uploadthing/server";
 
 import { env } from "@/config/env/server";
 import {
@@ -72,10 +73,24 @@ export const POST = async (request: Request) => {
         return new Response("No playback id", { status: 400 });
       }
 
-      const thumbailUrl = `${MUX_ASSET_BASE_URL}/${playbackId}/${MUX_ASSET_THUMBNAIL_FILENAME}`;
-      const previewUrl = `${MUX_ASSET_BASE_URL}/${playbackId}/${MUX_ASSET_PREVIEW_FILENAME}`;
-
       const duration = data.duration ? Math.round(data.duration * 1000) : 0;
+      const tempThumbnailUrl = `${MUX_ASSET_BASE_URL}/${playbackId}/${MUX_ASSET_THUMBNAIL_FILENAME}`;
+      const tempPreviewUrl = `${MUX_ASSET_BASE_URL}/${playbackId}/${MUX_ASSET_PREVIEW_FILENAME}`;
+
+      const utapi = new UTApi();
+      const [uploadedThumbnail, uploadedPreview] =
+        await utapi.uploadFilesFromUrl([tempThumbnailUrl, tempPreviewUrl]);
+
+      if (!uploadedThumbnail.data || !uploadedPreview.data) {
+        return new Response("Failed to upload thumbnail or preview", {
+          status: 500,
+        });
+      }
+
+      const { key: thumbnailKey, ufsUrl: thumbnailUrl } =
+        uploadedThumbnail.data;
+
+      const { key: previewKey, ufsUrl: previewUrl } = uploadedPreview.data;
 
       await db
         .update(videos)
@@ -83,8 +98,10 @@ export const POST = async (request: Request) => {
           muxStatus: data.status,
           muxPlaybackId: playbackId,
           muxAssetId: data.id,
-          thumbnailUrl: thumbailUrl,
+          thumbnailUrl,
+          thumbnailKey,
           previewUrl,
+          previewKey,
           duration,
         })
         .where(eq(videos.muxUploadId, data.upload_id));
@@ -137,6 +154,10 @@ export const POST = async (request: Request) => {
         .where(eq(videos.muxAssetId, data.asset_id));
 
       break;
+    }
+
+    default: {
+      return new Response("No matching event", { status: 400 });
     }
   }
 

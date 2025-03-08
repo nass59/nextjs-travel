@@ -6,7 +6,7 @@ import { Toaster } from "@workspace/design-system/components/ui/sonner";
 
 import { TRPCProvider } from "@/trpc/client";
 
-import "@workspace/design-system/styles/globals.css";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
