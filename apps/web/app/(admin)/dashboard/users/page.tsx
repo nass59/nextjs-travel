@@ -14,7 +14,7 @@ import {
 import { SearchUsers } from "@/features/auth/components/SearchUsers";
 import { UserListForm } from "@/features/auth/components/UserListForm";
 import { checkRole } from "@/features/auth/utils/roles";
-import { Role } from "@/types/global";
+import type { Role } from "@/types/global";
 
 type UsersPageProps = {
   searchParams: Promise<{ username?: string }>;

@@ -1,6 +1,6 @@
 import { AvatarImage } from "@workspace/design-system/components/ui/avatar";
 
-import { AvatarUrlParams } from "@/types/avatar";
+import type { AvatarUrlParams } from "@/types/avatar";
 import { getAvatarUrl } from "@/utils/avatar";
 
 /**

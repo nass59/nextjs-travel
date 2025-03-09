@@ -6,8 +6,8 @@ import {
 } from "lucide-react";
 
 import {
-  Button,
   buttonVariants,
+  type Button,
 } from "@workspace/design-system/components/ui/button";
 import { cn } from "@workspace/design-system/lib/utils";
 

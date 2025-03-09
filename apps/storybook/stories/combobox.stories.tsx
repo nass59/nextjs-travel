@@ -264,16 +264,16 @@ export const WithDropdownMenu: Story = {
                     <CommandList>
                       <CommandEmpty>No label found.</CommandEmpty>
                       <CommandGroup>
-                        {labels.map((label) => (
+                        {labels.map((labelItem) => (
                           <CommandItem
-                            key={label}
-                            value={label}
+                            key={labelItem}
+                            value={labelItem}
                             onSelect={(value) => {
                               setLabel(value);
                               setOpen(false);
                             }}
                           >
-                            {label}
+                            {labelItem}
                           </CommandItem>
                         ))}
                       </CommandGroup>
