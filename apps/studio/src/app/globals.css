@@ -1,3 +1,8 @@
 @import "@workspace/design-system/styles/globals.css";
 
 @source "../../node_modules/@uploadthing/react/dist";
+
+mux-player::part(poster) {
+  height: unset;
+  width: unset;
+}

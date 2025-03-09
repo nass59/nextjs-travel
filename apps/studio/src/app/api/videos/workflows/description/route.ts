@@ -73,8 +73,4 @@ export const { POST } = serve(async (context) => {
       .set({ description })
       .where(and(eq(videos.id, video.id), eq(videos.userId, video.userId)));
   });
-
-  await context.run("second-step", () => {
-    console.log("second step ran");
-  });
 });
