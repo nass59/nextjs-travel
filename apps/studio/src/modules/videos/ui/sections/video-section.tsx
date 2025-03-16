@@ -1,6 +1,7 @@
 "use client";
 
 import { Suspense } from "react";
+import { useAuth } from "@clerk/nextjs";
 import { ErrorBoundary } from "react-error-boundary";
 
 import { cn } from "@workspace/design-system/lib/utils";
@@ -16,7 +17,21 @@ type Props = {
 };
 
 const VideoSectionSuspense = ({ videoId }: Props) => {
+  const { isSignedIn } = useAuth();
+
+  const utils = trpc.useUtils();
   const [video] = trpc.videos.getOne.useSuspenseQuery({ id: videoId });
+  const createView = trpc.videosViews.create.useMutation({
+    onSuccess: () => {
+      utils.videos.getOne.invalidate({ id: videoId });
+    },
+  });
+
+  const handlePlay = () => {
+    if (!isSignedIn) return;
+
+    createView.mutate({ videoId });
+  };
 
   return (
     <>
@@ -28,7 +43,7 @@ const VideoSectionSuspense = ({ videoId }: Props) => {
       >
         <VideoPlayer
           autoPlay={false}
-          onPlay={() => {}}
+          onPlay={handlePlay}
           playbackId={video.muxPlaybackId}
           thumbnailUrl={video.thumbnailUrl}
         />
