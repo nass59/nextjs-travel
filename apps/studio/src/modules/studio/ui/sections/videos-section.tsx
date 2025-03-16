@@ -165,10 +165,10 @@ const VideosSectionSuspense = () => {
 
 export const VideosSection = () => {
   return (
-    <Suspense fallback={<VideosSectionSkeleton />}>
-      <ErrorBoundary fallback={<div>Error...</div>}>
+    <ErrorBoundary fallback={<div>Error...</div>}>
+      <Suspense fallback={<VideosSectionSkeleton />}>
         <VideosSectionSuspense />
-      </ErrorBoundary>
-    </Suspense>
+      </Suspense>
+    </ErrorBoundary>
   );
 };

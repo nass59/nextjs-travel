@@ -41,10 +41,10 @@ const CategoriesSkeleton = () => {
 
 export const CategoriesSection = ({ categoryId }: Props) => {
   return (
-    <Suspense fallback={<CategoriesSkeleton />}>
-      <ErrorBoundary fallback={<div>Error...</div>}>
+    <ErrorBoundary fallback={<div>Error...</div>}>
+      <Suspense fallback={<CategoriesSkeleton />}>
         <CategoriesSectionSuspense categoryId={categoryId} />
-      </ErrorBoundary>
-    </Suspense>
+      </Suspense>
+    </ErrorBoundary>
   );
 };

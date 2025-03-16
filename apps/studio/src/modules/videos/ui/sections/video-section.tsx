@@ -41,10 +41,10 @@ const VideoSectionSuspense = ({ videoId }: Props) => {
 
 export const VideoSection = ({ videoId }: Props) => {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
-      <ErrorBoundary fallback={<p>Error...</p>}>
+    <ErrorBoundary fallback={<p>Error...</p>}>
+      <Suspense fallback={<p>Loading...</p>}>
         <VideoSectionSuspense videoId={videoId} />
-      </ErrorBoundary>
-    </Suspense>
+      </Suspense>
+    </ErrorBoundary>
   );
 };

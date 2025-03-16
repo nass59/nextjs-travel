@@ -507,10 +507,10 @@ const FormSectionSkeleton = () => {
 
 export const FormSection = ({ videoId }: Props) => {
   return (
-    <Suspense fallback={<FormSectionSkeleton />}>
-      <ErrorBoundary fallback={<div>Error...</div>}>
+    <ErrorBoundary fallback={<div>Error...</div>}>
+      <Suspense fallback={<FormSectionSkeleton />}>
         <FormSectionSuspense videoId={videoId} />
-      </ErrorBoundary>
-    </Suspense>
+      </Suspense>
+    </ErrorBoundary>
   );
 };
