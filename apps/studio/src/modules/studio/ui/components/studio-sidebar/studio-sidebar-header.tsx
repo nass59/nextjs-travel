@@ -34,7 +34,7 @@ export const StudioSidebarHeader = () => {
           <Link href="/users/current">
             <UserAvatar
               imageUrl={user.imageUrl}
-              name={user.fullName || "User"}
+              name={user.fullName || user.username || "User"}
               size="xs"
             />
             <span className="text-sm">Your profile</span>
@@ -49,13 +49,15 @@ export const StudioSidebarHeader = () => {
       <Link href="/users/current">
         <UserAvatar
           imageUrl={user.imageUrl}
-          name={user.fullName || "User"}
+          name={user.fullName || user.username || "User"}
           className="size-[112px] transition-opacity hover:opacity-80"
         />
       </Link>
       <div className="mt-2 flex flex-col items-center gap-y-1">
         <p className="text-sm font-medium">Your profile</p>
-        <p className="text-muted-foreground text-xs">{user.fullName}</p>
+        <p className="text-muted-foreground text-xs">
+          {user.fullName || user.username}
+        </p>
       </div>
     </SidebarHeader>
   );
