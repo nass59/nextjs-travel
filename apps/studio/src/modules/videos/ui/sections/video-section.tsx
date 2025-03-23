@@ -6,14 +6,26 @@ import { ErrorBoundary } from "react-error-boundary";
 
 import { cn } from "@workspace/design-system/lib/utils";
 
-import { VideoTopRow } from "@/modules/videos/ui/components/video-top-row";
+import {
+  VideoTopRow,
+  VideoTopRowSkeleton,
+} from "@/modules/videos/ui/components/video-top-row";
 import { trpc } from "@/trpc/client";
 
 import { VideoBanner } from "../components/video-banner";
-import { VideoPlayer } from "../components/video-player";
+import { VideoPlayer, VideoPlayerSkeleton } from "../components/video-player";
 
 type Props = {
   videoId: string;
+};
+
+const VideoSectionSkeleton = () => {
+  return (
+    <>
+      <VideoPlayerSkeleton />
+      <VideoTopRowSkeleton />
+    </>
+  );
 };
 
 const VideoSectionSuspense = ({ videoId }: Props) => {
@@ -57,7 +69,7 @@ const VideoSectionSuspense = ({ videoId }: Props) => {
 export const VideoSection = ({ videoId }: Props) => {
   return (
     <ErrorBoundary fallback={<p>Error...</p>}>
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<VideoSectionSkeleton />}>
         <VideoSectionSuspense videoId={videoId} />
       </Suspense>
     </ErrorBoundary>

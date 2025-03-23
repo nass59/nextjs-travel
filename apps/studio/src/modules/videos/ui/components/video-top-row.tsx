@@ -1,6 +1,8 @@
 import { useMemo } from "react";
 import { format, formatDistanceToNow } from "date-fns";
 
+import { Skeleton } from "@workspace/design-system/components/ui/skeleton";
+
 import type { VideoGetOneOutput } from "@/modules/videos/types";
 
 import { VideoDescription } from "./video-description";
@@ -10,6 +12,27 @@ import { VideoReactions } from "./video-reactions";
 
 type Props = {
   video: VideoGetOneOutput;
+};
+
+export const VideoTopRowSkeleton = () => {
+  return (
+    <div className="mt-4 flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
+        <Skeleton className="h-6 w-4/5 md:w-2/5" />
+      </div>
+      <div className="flex w-full items-center justify-between">
+        <div className="flex w-[70%] items-center gap-3">
+          <Skeleton className="h-10 w-10 shrink-0 rounded-full" />
+          <div className="flex w-full flex-col gap-2">
+            <Skeleton className="h-5 w-4/5 md:w-2/6" />
+            <Skeleton className="h-5 w-3/5 md:w-1/5" />
+          </div>
+        </div>
+        <Skeleton className="h-9 w-2/6 rounded-full md:w-1/6" />
+      </div>
+      <div className="h-[120px] w-full" />
+    </div>
+  );
 };
 
 export const VideoTopRow = ({ video }: Props) => {
