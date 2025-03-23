@@ -56,10 +56,14 @@ export async function POST(req: Request) {
 
   if (eventType === "user.created") {
     const { data } = evt;
+    const username =
+      data.first_name && data.last_name
+        ? `${data.first_name} ${data.last_name}`
+        : data.username || "User";
 
     await db.insert(users).values({
       clerkId: data.id,
-      name: `${data.first_name} ${data.last_name}`,
+      name: username,
       imageUrl: data.image_url,
     });
   }
@@ -78,11 +82,18 @@ export async function POST(req: Request) {
 
   if (eventType === "user.updated") {
     const { data } = evt;
+    const username =
+      data.first_name && data.last_name
+        ? `${data.first_name} ${data.last_name}`
+        : data.username || "User";
 
-    await db.update(users).set({
-      name: `${data.first_name} ${data.last_name}`,
-      imageUrl: data.image_url,
-    });
+    await db
+      .update(users)
+      .set({
+        name: username,
+        imageUrl: data.image_url,
+      })
+      .where(eq(users.clerkId, data.id));
   }
 
   return new Response("Webhook received", { status: 200 });
