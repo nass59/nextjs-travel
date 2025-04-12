@@ -22,7 +22,7 @@ type Props = {
   onRemove?: () => void;
 };
 
-export const VideoMenu = ({ videoId, variant, onRemove }: Props) => {
+export const VideoMenu = ({ videoId, variant = "ghost", onRemove }: Props) => {
   const onShare = () => {
     const fullUrl = `${env.NEXT_PUBLIC_APP_URL}/videos/${videoId}`;
     navigator.clipboard.writeText(fullUrl);
