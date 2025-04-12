@@ -22,7 +22,7 @@
     "@mux/mux-uploader-react": "^1.2.0",
     "@neondatabase/serverless": "^1.0.0",
     "@t3-oss/env-nextjs": "^0.12.0",
-    "@tanstack/react-query": "^5.72.2",
+    "@tanstack/react-query": "^5.73.3",
     "@trpc/client": "11.0.4",
     "@trpc/react-query": "11.0.4",
     "@trpc/server": "11.0.4",
@@ -35,7 +35,7 @@
     "class-variance-authority": "^0.7.1",
     "client-only": "^0.0.1",
     "date-fns": "^4.1.0",
-    "dotenv": "^16.4.7",
+    "dotenv": "^16.5.0",
     "drizzle-orm": "^0.41.0",
     "drizzle-zod": "^0.7.1",
     "lucide-react": "^0.487.0",
@@ -53,8 +53,8 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@types/react": "^19.1.0",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.2",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
