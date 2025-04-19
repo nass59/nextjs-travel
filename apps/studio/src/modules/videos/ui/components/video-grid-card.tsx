@@ -1,12 +1,21 @@
 import Link from "next/link";
 
-import type { VideoGetManyOutput } from "@/modules/videos/types";
-import { VideoInfo } from "@/modules/videos/ui/components/video-info";
-import { VideoThumbnail } from "@/modules/videos/ui/components/video-thumbnail";
+import type { VideoGetManyOutput } from "../../types";
+import { VideoInfo, VideoInfoSkeleton } from "./video-info";
+import { VideoThumbnail, VideoThumbnailSkeleton } from "./video-thumbnail";
 
 type Props = {
   data: VideoGetManyOutput["items"][number];
   onRemove?: () => void;
+};
+
+export const VideoGridCardSkeleton = () => {
+  return (
+    <div className="flex w-full flex-col gap-2">
+      <VideoThumbnailSkeleton />
+      <VideoInfoSkeleton />
+    </div>
+  );
 };
 
 export const VideoGridCard = ({ data, onRemove }: Props) => {

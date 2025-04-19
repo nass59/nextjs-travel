@@ -6,8 +6,9 @@ import { Button } from "@workspace/design-system/components/ui/button";
 import { Separator } from "@workspace/design-system/components/ui/separator";
 import { cn } from "@workspace/design-system/lib/utils";
 
-import type { VideoGetOneOutput } from "@/modules/videos/types";
 import { trpc } from "@/trpc/client";
+
+import type { VideoGetOneOutput } from "../../types";
 
 type Props = {
   videoId: string;

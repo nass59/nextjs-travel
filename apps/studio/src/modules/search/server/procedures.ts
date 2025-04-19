@@ -1,16 +1,16 @@
-import { TRPCError } from "@trpc/server";
-import { and, desc, eq, getTableColumns, lt, not, or } from "drizzle-orm";
+import { and, desc, eq, getTableColumns, ilike, lt, or } from "drizzle-orm";
 import { z } from "zod";
 
 import { db } from "@/db";
 import { users, videoReactions, videos, videoViews } from "@/db/schema";
 import { baseProcedure, createTRPCRouter } from "@/trpc/init";
 
-export const suggestionsRouter = createTRPCRouter({
+export const searchRouter = createTRPCRouter({
   getMany: baseProcedure
     .input(
       z.object({
-        videoId: z.string().uuid(),
+        query: z.string().nullish(),
+        categoryId: z.string().uuid().nullish(),
         cursor: z
           .object({
             id: z.string().uuid(),
@@ -21,20 +21,14 @@ export const suggestionsRouter = createTRPCRouter({
       })
     )
     .query(async ({ input }) => {
-      const { videoId, cursor, limit } = input;
+      const { cursor, limit, query, categoryId } = input;
 
-      const [existingVideo] = await db
-        .select()
-        .from(videos)
-        .where(eq(videos.id, videoId));
-
-      if (!existingVideo) {
-        throw new TRPCError({
-          code: "NOT_FOUND",
-          message: "Video not found",
-        });
-      }
-
+      /**
+       * This query fetches videos for a user.
+       * It uses the cursor to paginate the results.
+       * If the updatedAt is the same, the id is used to determine the order.
+       * The query fetches one more item than the limit to check if there are more pages.
+       */
       const data = await db
         .select({
           ...getTableColumns(videos),
@@ -59,11 +53,8 @@ export const suggestionsRouter = createTRPCRouter({
         .innerJoin(users, eq(videos.userId, users.id))
         .where(
           and(
-            not(eq(videos.id, existingVideo.id)),
-            eq(videos.visibility, "public"),
-            existingVideo.categoryId
-              ? eq(videos.categoryId, existingVideo.categoryId)
-              : undefined,
+            ilike(videos.title, `%${query}%`),
+            categoryId ? eq(videos.categoryId, categoryId) : undefined,
             cursor
               ? or(
                   lt(videos.updatedAt, cursor.updatedAt),

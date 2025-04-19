@@ -1,6 +1,6 @@
 import { AlertTriangleIcon } from "lucide-react";
 
-import type { VideoGetOneOutput } from "@/modules/videos/types";
+import type { VideoGetOneOutput } from "../../types";
 
 type Props = {
   status: VideoGetOneOutput["muxStatus"];

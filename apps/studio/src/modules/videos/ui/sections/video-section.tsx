@@ -6,14 +6,11 @@ import { ErrorBoundary } from "react-error-boundary";
 
 import { cn } from "@workspace/design-system/lib/utils";
 
-import {
-  VideoTopRow,
-  VideoTopRowSkeleton,
-} from "@/modules/videos/ui/components/video-top-row";
 import { trpc } from "@/trpc/client";
 
 import { VideoBanner } from "../components/video-banner";
 import { VideoPlayer, VideoPlayerSkeleton } from "../components/video-player";
+import { VideoTopRow, VideoTopRowSkeleton } from "../components/video-top-row";
 
 type Props = {
   videoId: string;

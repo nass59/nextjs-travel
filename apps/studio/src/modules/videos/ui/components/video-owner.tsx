@@ -7,7 +7,8 @@ import { UserAvatar } from "@/components/user-avatar";
 import { useSubscription } from "@/modules/subscriptions/hooks/use-subscription";
 import { SubscriptionButton } from "@/modules/subscriptions/ui/components/subscription-button";
 import { UserInfo } from "@/modules/users/ui/components/user-info";
-import type { VideoGetOneOutput } from "@/modules/videos/types";
+
+import type { VideoGetOneOutput } from "../../types";
 
 type Props = {
   user: VideoGetOneOutput["user"];

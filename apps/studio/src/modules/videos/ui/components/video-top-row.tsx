@@ -3,8 +3,7 @@ import { format, formatDistanceToNow } from "date-fns";
 
 import { Skeleton } from "@workspace/design-system/components/ui/skeleton";
 
-import type { VideoGetOneOutput } from "@/modules/videos/types";
-
+import type { VideoGetOneOutput } from "../../types";
 import { VideoDescription } from "./video-description";
 import { VideoMenu } from "./video-menu";
 import { VideoOwner } from "./video-owner";
