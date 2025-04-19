@@ -2,8 +2,6 @@ import { DEFAULT_LIMIT } from "@/constants";
 import { SearchView } from "@/modules/search/ui/views/search-view";
 import { HydrateClient, trpc } from "@/trpc/server";
 
-export const dynamic = "force-dynamic";
-
 type PageProps = {
   searchParams: Promise<{
     query: string | undefined;

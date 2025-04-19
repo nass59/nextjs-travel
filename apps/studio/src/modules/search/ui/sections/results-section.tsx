@@ -1,11 +1,20 @@
 "use client";
 
+import { Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+
 import { useIsMobile } from "@workspace/design-system/hooks/use-mobile";
 
 import { InfiniteScroll } from "@/components/infinite-scroll";
 import { DEFAULT_LIMIT } from "@/constants";
-import { VideoGridCard } from "@/modules/videos/ui/components/video-grid-card";
-import { VideoRowCard } from "@/modules/videos/ui/components/video-row-card";
+import {
+  VideoGridCard,
+  VideoGridCardSkeleton,
+} from "@/modules/videos/ui/components/video-grid-card";
+import {
+  VideoRowCard,
+  VideoRowCardSkeleton,
+} from "@/modules/videos/ui/components/video-row-card";
 import { trpc } from "@/trpc/client";
 
 type Props = {
@@ -13,7 +22,7 @@ type Props = {
   categoryId: string | undefined;
 };
 
-export const ResultSection = ({ query, categoryId }: Props) => {
+const ResultSectionSuspense = ({ query, categoryId }: Props) => {
   const isMobile = useIsMobile();
   const [results, resultsQuery] = trpc.search.getMany.useSuspenseInfiniteQuery(
     {
@@ -52,5 +61,35 @@ export const ResultSection = ({ query, categoryId }: Props) => {
         fetchNextPage={resultsQuery.fetchNextPage}
       />
     </>
+  );
+};
+
+const ResultSectionSkeleton = () => {
+  return (
+    <div>
+      <div className="hidden flex-col gap-4 md:flex">
+        {Array.from({ length: 5 }).map((_, index) => (
+          <VideoRowCardSkeleton key={index} />
+        ))}
+      </div>
+      <div className="flex flex-col gap-4 gap-y-10 p-4 pt-6 md:hidden">
+        {Array.from({ length: 5 }).map((_, index) => (
+          <VideoGridCardSkeleton key={index} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export const ResultSection = (props: Props) => {
+  return (
+    <ErrorBoundary fallback={<p>Error...</p>}>
+      <Suspense
+        key={`${props.query}-${props.categoryId}`}
+        fallback={<ResultSectionSkeleton />}
+      >
+        <ResultSectionSuspense {...props} />
+      </Suspense>
+    </ErrorBoundary>
   );
 };

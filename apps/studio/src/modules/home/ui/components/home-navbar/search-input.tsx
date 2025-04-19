@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { SearchIcon, XIcon } from "lucide-react";
 
 import { Button } from "@workspace/design-system/components/ui/button";
@@ -10,7 +10,11 @@ import { env } from "@/config/env/client";
 
 export const SearchInput = () => {
   const router = useRouter();
-  const [value, setValue] = useState<string>("");
+  const searchParamas = useSearchParams();
+  const query = searchParamas.get("query") || "";
+  const categoryId = searchParamas.get("categoryId") || "";
+
+  const [value, setValue] = useState<string>(query);
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,6 +23,10 @@ export const SearchInput = () => {
     const newQuery = value.trim();
 
     url.searchParams.set("query", encodeURIComponent(newQuery));
+
+    if (categoryId) {
+      url.searchParams.set("categoryId", categoryId);
+    }
 
     if (newQuery === "") {
       url.searchParams.delete("query");
