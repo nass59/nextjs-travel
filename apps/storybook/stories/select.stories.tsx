@@ -14,7 +14,7 @@ import {
 /**
  * Displays a list of options for the user to pick from—triggered by a button.
  */
-const meta = {
+const meta: Meta<typeof Select> = {
   title: "ui/Select",
   component: Select,
   tags: ["autodocs"],
