@@ -35,7 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <body>
+        <body suppressHydrationWarning>
           <TRPCProvider>
             <Toaster />
             {children}
