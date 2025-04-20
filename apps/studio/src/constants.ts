@@ -1,4 +1,4 @@
-export const DEFAULT_LIMIT = 5;
+export const DEFAULT_LIMIT = 10;
 
 // MUX ASSET
 export const MUX_ASSET_BASE_URL = "https://image.mux.com";

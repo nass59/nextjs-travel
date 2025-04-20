@@ -32,6 +32,86 @@ import {
 } from "@/trpc/init";
 
 export const videosRouter = createTRPCRouter({
+  getManyTrending: baseProcedure
+    .input(
+      z.object({
+        cursor: z
+          .object({
+            id: z.string().uuid(),
+            viewCount: z.number(),
+          })
+          .nullish(),
+        limit: z.number().min(1).max(100),
+      })
+    )
+    .query(async ({ input }) => {
+      const { cursor, limit } = input;
+
+      const viewCountSubquery = db.$count(
+        videoViews,
+        eq(videoViews.videoId, videos.id)
+      );
+
+      /**
+       * This query fetches videos for a user.
+       * It uses the cursor to paginate the results.
+       * If the updatedAt is the same, the id is used to determine the order.
+       * The query fetches one more item than the limit to check if there are more pages.
+       */
+      const data = await db
+        .select({
+          ...getTableColumns(videos),
+          user: users,
+          viewCount: viewCountSubquery,
+          likeCount: db.$count(
+            videoReactions,
+            and(
+              eq(videoReactions.videoId, videos.id),
+              eq(videoReactions.type, "like")
+            )
+          ),
+          dislikeCount: db.$count(
+            videoReactions,
+            and(
+              eq(videoReactions.videoId, videos.id),
+              eq(videoReactions.type, "dislike")
+            )
+          ),
+        })
+        .from(videos)
+        .innerJoin(users, eq(videos.userId, users.id))
+        .where(
+          and(
+            eq(videos.visibility, "public"),
+            cursor
+              ? or(
+                  lt(viewCountSubquery, cursor.viewCount),
+                  and(
+                    eq(viewCountSubquery, cursor.viewCount),
+                    lt(videos.id, cursor.id)
+                  )
+                )
+              : undefined
+          )
+        )
+        // Order by updatedAt DESC
+        .orderBy(desc(viewCountSubquery))
+        // Add one to the limit to check if there are more pages
+        .limit(limit + 1);
+
+      // Check if there are more pages
+      const hasMore = data.length > limit;
+      // Remove the last item if there are more pages
+      const items = hasMore ? data.slice(0, -1) : data;
+      // Get the last item
+      const lastItem = items[items.length - 1];
+
+      const nextCursor = hasMore
+        ? { id: lastItem.id, viewCount: lastItem.viewCount }
+        : null;
+
+      return { items, nextCursor };
+    }),
   getMany: baseProcedure
     .input(
       z.object({

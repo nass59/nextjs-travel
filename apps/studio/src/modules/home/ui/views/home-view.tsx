@@ -1,4 +1,4 @@
-import { HomeVideosSection } from "@/modules/home/ui/sections/home-video-section";
+import { HomeVideosSection } from "@/modules/home/ui/sections/home-videos-section";
 
 import { CategoriesSection } from "../sections/categories-section";
 
