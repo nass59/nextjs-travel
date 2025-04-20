@@ -55,7 +55,7 @@ export const VideoInfo = ({ data, onRemove }: Props) => {
           <UserInfo name={data.user.name} />
         </Link>
         <Link href={`/videos/${data.id}`}>
-          <p className="line-clamp-1 text-sm text-gray-600">
+          <p className="line-clamp-1 text-xs text-gray-600">
             {compactViews} views • {compactDate}
           </p>
         </Link>
