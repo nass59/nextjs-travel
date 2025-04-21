@@ -157,7 +157,7 @@ export const POST = async (request: Request) => {
     }
 
     default: {
-      return new Response("No matching event", { status: 400 });
+      return new Response("No matching event", { status: 200 });
     }
   }
 
